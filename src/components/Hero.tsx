@@ -33,7 +33,7 @@ const Hero = () => {
                 </h1>
 
                 <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-500 dark:text-zinc-400 font-light mb-12 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-                    Find verified independent escorts, erotic massages, male escorts, trans services in your city — Post free ads
+                    Find independent companion classifieds, wellness massage listings, and local service providers across India — Free ad posting
                 </p>
 
                 {/* 🔍 Location Search Bar */}
@@ -58,22 +58,22 @@ const Hero = () => {
                         <div className="w-12 h-12 rounded-2xl bg-pink-50 dark:bg-pink-900/10 flex items-center justify-center border border-pink-200 dark:border-pink-800 group-hover:border-pink-400 dark:group-hover:border-pink-600 transition-colors">
                             <ShieldCheck className="w-6 h-6 text-pink-500" />
                         </div>
-                        <span className="text-gray-800 dark:text-zinc-200 font-bold">100% Verified</span>
-                        <span className="text-pink-400 text-xs uppercase tracking-widest">Profiles & Photos</span>
+                        <span className="text-gray-800 dark:text-zinc-200 font-bold">Community Moderated</span>
+                        <span className="text-pink-400 text-xs uppercase tracking-widest">Safety Guidelines</span>
                     </div>
                     <div className="flex flex-col items-center gap-2 group">
                         <div className="w-12 h-12 rounded-2xl bg-purple-50 dark:bg-purple-900/10 flex items-center justify-center border border-purple-200 dark:border-purple-800 group-hover:border-purple-400 dark:group-hover:border-purple-600 transition-colors">
                             <Users className="w-6 h-6 text-purple-500" />
                         </div>
-                        <span className="text-gray-800 dark:text-zinc-200 font-bold">5,000+ Members</span>
-                        <span className="text-purple-400 text-xs uppercase tracking-widest">Active Community</span>
+                        <span className="text-gray-800 dark:text-zinc-200 font-bold">Pan-India Directory</span>
+                        <span className="text-purple-400 text-xs uppercase tracking-widest">Major States & Cities</span>
                     </div>
                     <div className="hidden md:flex flex-col items-center gap-2 group col-span-1">
                         <div className="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-900/10 flex items-center justify-center border border-amber-200 dark:border-amber-800 group-hover:border-amber-400 dark:group-hover:border-amber-600 transition-colors">
                             <Star className="w-6 h-6 text-amber-500 fill-amber-200 dark:fill-amber-500/20" />
                         </div>
-                        <span className="text-gray-800 dark:text-zinc-200 font-bold">Premium Tier</span>
-                        <span className="text-amber-400 text-xs uppercase tracking-widest">Exceptional Quality</span>
+                        <span className="text-gray-800 dark:text-zinc-200 font-bold">Direct Communication</span>
+                        <span className="text-amber-400 text-xs uppercase tracking-widest">No Hidden Commissions</span>
                     </div>
                 </div>
             </div>

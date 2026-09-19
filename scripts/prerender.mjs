@@ -210,8 +210,8 @@ async function runPrerender() {
   }
 
   const serviceAreasContent = `
-    <p style="font-size: 16px; color: #e4e4e7; margin-bottom: 24px;">Explore all 36 Indian states and union territories where verified independent companions and body massage specialists provide discreet in-call and doorstep outcall sessions.</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-bottom: 36px;">
+    <p style="font-size: 16px; color: #e4e4e7; margin-bottom: 24px;">Explore all 36 Indian states and union territories where independent companions and body massage specialists provide classified listings across major cities and districts.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-bottom: 36px;">
       ${indiaRegions.map(reg => `
         <div style="background-color: #141416; border: 1px solid #27272a; border-radius: 12px; padding: 16px;">
           <h2 style="color: #fafafa; margin: 0 0 8px 0; font-size: 17px;">${escapeHtml(reg.name)}</h2>
@@ -220,8 +220,7 @@ async function runPrerender() {
             <a href="/massage/${reg.slug}" style="color: #34d399; font-weight: 600; text-decoration: none;">Massage &rarr;</a>
           </p>
           <div style="font-size: 12px; color: #a1a1aa; line-height: 1.8;">
-            ${reg.cities.slice(0, 8).map(c => `<a href="/call-girls/${reg.slug}/${c.slug}" style="color: #d4d4d8; text-decoration: none; margin-right: 8px;">${escapeHtml(c.name)}</a>`).join(' • ')}
-            ${reg.cities.length > 8 ? `<span>+${reg.cities.length - 8} more</span>` : ''}
+            ${reg.cities.map(c => `<a href="/call-girls/${reg.slug}/${c.slug}" style="color: #d4d4d8; text-decoration: none; margin-right: 8px;">${escapeHtml(c.name)}</a>`).join(' • ')}
           </div>
         </div>
       `).join('')}
@@ -242,11 +241,13 @@ async function runPrerender() {
             <a href="/massage/${reg.slug}" style="color: #34d399; text-decoration: underline;">${escapeHtml(reg.name)} Massage</a>
           </span>
         </h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; margin-top: 14px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px;">
           ${reg.cities.map(c => `
-            <a href="/call-girls/${reg.slug}/${c.slug}" style="color: #d4d4d8; font-size: 13px; text-decoration: none; padding: 4px 6px; border-radius: 4px; background-color: #1c1c1f;">
-              ${escapeHtml(c.name)} Call Girls
-            </a>
+            <span style="padding: 4px 8px; border-radius: 4px; background-color: #1c1c1f; font-size: 13px;">
+              <a href="/call-girls/${reg.slug}/${c.slug}" style="color: #f4b827; text-decoration: none; margin-right: 6px;">${escapeHtml(c.name)} Call Girls</a>
+              <span style="color: #52525b;">|</span>
+              <a href="/massage/${reg.slug}/${c.slug}" style="color: #34d399; text-decoration: none; margin-left: 6px;">Massage</a>
+            </span>
           `).join('')}
         </div>
       </div>
@@ -259,15 +260,15 @@ async function runPrerender() {
   const staticPages = [
     {
       path: '',
-      title: 'Koka Site - Premium Call Girl & Body Massage Services Directory',
-      desc: 'Discover verified call girls, independent escorts and professional body massage services across top metro cities on Koka Site. 100% cash payment hand-to-hand upon meeting.',
-      h1: 'Verified Adult Escorts, Independent Call Girls & Body Massage Directory',
+      title: 'Koka Site — Independent Adult Companions & Massage Classifieds Directory',
+      desc: 'Browse independent companion classifieds, adult escorts, and body massage directory across India on Koka Site. Direct contacts, transparent listings, and safety guidelines.',
+      h1: 'Independent Adult Companions, Classifieds & Body Massage Directory',
       content: `
-        <p style="font-size: 18px; color: #e4e4e7; margin-bottom: 24px;">Welcome to <strong>Koka Site</strong>, India's leading verified classified platform connecting consenting adults with verified independent companions, elite escorts, and relaxing body massage specialists.</p>
+        <p style="font-size: 18px; color: #e4e4e7; margin-bottom: 24px;">Welcome to <strong>Koka Site</strong>, India's classifieds platform connecting adults with independent companions, escorts, and relaxing body massage specialists.</p>
         
         <div style="background-color: #18181b; border: 1px solid #27272a; border-radius: 10px; padding: 24px; margin-bottom: 32px;">
-          <h2 style="font-size: 20px; color: #f4b827; margin-top: 0;">100% Safe &amp; Verified Directory</h2>
-          <p style="margin-bottom: 0;">We take client and advertiser safety seriously. All profiles listed on our directory are vetted with real phone numbers, genuine photos, and strict adherence to hand-to-hand cash payment on meeting. Never pay advance fees or online deposits to any companion.</p>
+          <h2 style="font-size: 20px; color: #f4b827; margin-top: 0;">Community Moderated &amp; Transparent Directory</h2>
+          <p style="margin-bottom: 0;">We prioritize client and advertiser safety. Profiles listed on our directory provide direct advertiser communication channels. For your safety, we strongly advise meeting in verified settings and avoiding any online advance deposits or booking fees.</p>
         </div>
 
         <h2 style="font-size: 22px; color: #fafafa; margin-bottom: 16px;">Top Service Cities in India</h2>
@@ -502,12 +503,12 @@ async function runPrerender() {
           writtenRegions.add(regionSlug);
 
           const customStateData = stateSEOData[regionSlug];
-          const stateTitle = customStateData?.title || `Verified ${regionName} ${cfg.termPlural} & Escort Directory | Koka Site`;
-          const stateDesc = customStateData?.metaDesc || `Looking for verified ${cfg.termPlural.toLowerCase()} in ${regionName}? Browse our comprehensive directory of verified ${cfg.typeDesc} in ${regionName} with 24/7 doorstep delivery.`;
+          const stateTitle = customStateData?.title || `${regionName} ${cfg.termPlural} — Independent Directory | Koka Site`;
+          const stateDesc = customStateData?.metaDesc || `Explore independent ${cfg.termPlural.toLowerCase()} and wellness services in ${regionName}. Browse listings across major districts with direct advertiser contacts.`;
           const stateH1 = customStateData?.h1 || `${regionName} ${cfg.termPlural} & Companion Directory`;
           const stateIntro = customStateData?.intro
             ? customStateData.intro.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br/>')
-            : `<p>Welcome to Koka Site's official ${regionName} ${cfg.termPlural.toLowerCase()} directory. Browse 100% verified independent companions and ${cfg.typeDesc} operating across all prime districts and cities in ${regionName}.</p><p>All listings feature direct contact numbers, real photos, and strict cash payment hand-to-hand upon meeting. No advance payments are ever required.</p>`;
+            : `<p>Welcome to Koka Site's official ${regionName} ${cfg.termPlural.toLowerCase()} directory. Browse independent companions and ${cfg.typeDesc} operating across districts and cities in ${regionName}.</p><p>All listings provide direct contact options. We encourage users to verify arrangements directly and avoid sending any advance payments.</p>`;
 
           const citiesListHtml = region.cities.map(c =>
             `<li><a href="/${cfg.prefix}/${regionSlug}/${c.slug}" style="color: #f4b827; text-decoration: none; font-weight: 500; display: block; padding: 10px 14px; background: #18181b; border: 1px solid #27272a; border-radius: 6px; transition: border-color 0.2s;">${escapeHtml(c.name)} ${cfg.termPlural}</a></li>`
@@ -582,54 +583,54 @@ async function runPrerender() {
               `;
             } else {
               pageTitle = cfg.prefix === 'call-girls'
-                ? `Low cost Call Girls in ${cityName} at cash payment Delivery | Koka Site`
-                : `Best Body Massage in ${cityName} | Verified Spa & Massage Services - Koka Site`;
+                ? `${cityName} Call Girls — Independent Companions in ${cityName} | Koka Site`
+                : `${cityName} Body Massage — Independent Spas & Therapists in ${cityName} | Koka Site`;
 
               pageDesc = cfg.prefix === 'call-girls'
-                ? `Looking for trusted Call Girls in ${cityName}? Koka Site brings you premium call girls in ${cityName} with instant booking, cash payment hand to hand, and 24/7 delivery.`
-                : `Looking for the best body massage services in ${cityName}? Koka Site lists verified massage therapists, Nuru massage, and body to body (B2B) massage sessions in ${cityName}.`;
+                ? `Explore independent call girls and adult companions in ${cityName}, ${regionName}. Browse local classifieds with direct contact details and safety guidance on Koka Site.`
+                : `Discover independent body massage therapists and wellness spa listings in ${cityName}, ${regionName}. Transparent listings and direct contacts on Koka Site.`;
 
-              h1Text = `${cityName} ${cfg.termPlural} - Verified Companions & Guide`;
+              h1Text = `${cityName} ${cfg.termPlural} — Independent Classifieds & Directory`;
 
               mainBodyHtml = `
                 <p style="font-size: 17px; line-height: 1.8; color: #e4e4e7; margin-bottom: 20px;">
-                  Welcome to the official <strong>${escapeHtml(cityName)}</strong> directory for ${escapeHtml(cfg.typeDesc)}. Whether you are a resident professional or visiting ${escapeHtml(cityName)}, ${escapeHtml(regionName)} for business or vacation, Koka Site connects you with verified independent providers offering 100% genuine companionship.
+                  Welcome to the official <strong>${escapeHtml(cityName)}</strong> directory for ${escapeHtml(cfg.typeDesc)}. Whether you are a resident professional or visiting ${escapeHtml(cityName)}, ${escapeHtml(regionName)}, Koka Site connects you with local independent advertisers and classified listings.
                 </p>
 
                 <div style="background-color: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 22px; margin-bottom: 28px;">
-                  <h2 style="font-size: 20px; color: #f4b827; margin-top: 0;">Why Choose Verified Companions in ${escapeHtml(cityName)}?</h2>
-                  <p>In ${escapeHtml(cityName)}, our independent advertisers focus on providing authentic, respectful, and confidential interactions. Enjoy stress-free evenings, dinner dates, or private sessions in comfortable surroundings.</p>
+                  <h2 style="font-size: 20px; color: #f4b827; margin-top: 0;">Directory Guidelines in ${escapeHtml(cityName)}</h2>
+                  <p>In ${escapeHtml(cityName)}, independent advertisers provide classified listings directly. We advocate for transparency, mutual respect, and privacy.</p>
                   <ul style="line-height: 1.8; margin-bottom: 0; padding-left: 20px;">
-                    <li><strong>Direct Connections:</strong> No middlemen or hidden agency charges. Connect directly via WhatsApp or call.</li>
-                    <li><strong>Hand-to-Hand Cash:</strong> Complete transparency. Pay only when you meet the companion in person.</li>
-                    <li><strong>Discreet In-Call &amp; Outcall:</strong> Available for doorstep visits to hotels and private residences across ${escapeHtml(cityName)}.</li>
+                    <li><strong>Direct Communication:</strong> Communicate directly with listed providers via their published contact details.</li>
+                    <li><strong>Safety First:</strong> Avoid paying upfront deposits or booking fees to unknown parties. Arrange meetings in safe, reputable locations.</li>
+                    <li><strong>Adult Classifieds:</strong> All advertisers and users must be 18 years of age or older.</li>
                   </ul>
                 </div>
 
-                <h2 style="font-size: 20px; color: #fafafa; margin-bottom: 12px;">Standard Rates &amp; Pricing Guidance in ${escapeHtml(cityName)}</h2>
+                <h2 style="font-size: 20px; color: #fafafa; margin-bottom: 12px;">Market Pricing Overview in ${escapeHtml(cityName)}</h2>
                 <div style="overflow-x: auto; margin-bottom: 28px;">
                   <table style="width: 100%; border-collapse: collapse; font-size: 14px; text-align: left; background: #18181b; border-radius: 8px; overflow: hidden;">
                     <thead>
                       <tr style="border-bottom: 1px solid #27272a; color: #f4b827;">
                         <th style="padding: 12px 16px;">Duration</th>
-                        <th style="padding: 12px 16px;">Service Type</th>
-                        <th style="padding: 12px 16px;">Average Cost</th>
+                        <th style="padding: 12px 16px;">Service Category</th>
+                        <th style="padding: 12px 16px;">Estimated Range</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr style="border-bottom: 1px solid #27272a;">
                         <td style="padding: 12px 16px;">1 Hour Session</td>
-                        <td style="padding: 12px 16px;">Short time companionship</td>
+                        <td style="padding: 12px 16px;">Standard companionship / session</td>
                         <td style="padding: 12px 16px; color: #f4b827; font-weight: 600;">₹2,000 - ₹3,500</td>
                       </tr>
                       <tr style="border-bottom: 1px solid #27272a;">
                         <td style="padding: 12px 16px;">2 Hours Session</td>
-                        <td style="padding: 12px 16px;">Relaxed dinner &amp; date</td>
+                        <td style="padding: 12px 16px;">Extended dinner or social date</td>
                         <td style="padding: 12px 16px; color: #f4b827; font-weight: 600;">₹3,500 - ₹6,000</td>
                       </tr>
                       <tr>
                         <td style="padding: 12px 16px;">Full Night (Overnight)</td>
-                        <td style="padding: 12px 16px;">Complete overnight companionship</td>
+                        <td style="padding: 12px 16px;">Extended companionship</td>
                         <td style="padding: 12px 16px; color: #f4b827; font-weight: 600;">₹7,000 - ₹12,000</td>
                       </tr>
                     </tbody>
@@ -641,16 +642,16 @@ async function runPrerender() {
             // FAQs for rich snippet inclusion
             faqs = [
               {
-                q: `How do I book verified ${cfg.termPlural.toLowerCase()} in ${cityName}?`,
-                a: `Browse through the verified ad profiles listed for ${cityName} on Koka Site, select your preferred companion, and reach out directly through WhatsApp or phone call to confirm availability, timings, and location.`
+                q: `How do I find independent ${cfg.termPlural.toLowerCase()} in ${cityName}?`,
+                a: `Browse through the classified ad profiles listed for ${cityName} on Koka Site and contact the advertiser directly via the phone number or messaging details on their profile.`
               },
               {
                 q: `Is advance payment required for bookings in ${cityName}?`,
-                a: `No. Koka Site strictly advises all clients to NEVER transfer online advance money, UPI deposits, or hotel booking fees. All genuine companions accept 100% cash payment hand-to-hand upon meeting.`
+                a: `We advise users never to transfer online advance payments, wire transfers, or booking fees. For safety and fraud prevention, arrange meetings in person at verified venues.`
               },
               {
                 q: `What areas and localities in ${cityName} are covered?`,
-                a: `Companions in ${cityName} provide outcall services to major hotels, corporate corridors, and residential neighborhoods across ${cityName} and surrounding areas.`
+                a: `Independent advertisers in ${cityName} typically indicate their service radii, covering major hotel districts, central neighborhoods, and surrounding suburbs.`
               }
             ];
 
@@ -690,26 +691,19 @@ async function runPrerender() {
               mainContent: `${mainBodyHtml}${faqHtml}${nearbyHtml}`,
               schemaJson: {
                 "@context": "https://schema.org",
-                "@graph": [
-                  {
-                    "@type": "WebPage",
-                    "@id": `${SITE_URL}${cfg.prefix}/${regionSlug}/${citySlug}`,
-                    "name": pageTitle,
-                    "description": pageDesc,
-                    "url": `${SITE_URL}${cfg.prefix}/${regionSlug}/${citySlug}`
-                  },
-                  {
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map(f => ({
-                      "@type": "Question",
-                      "name": f.q,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": f.a
-                      }
-                    }))
-                  }
-                ]
+                "@type": "WebPage",
+                "name": pageTitle,
+                "description": pageDesc,
+                "url": `${SITE_URL}${cfg.prefix}/${regionSlug}/${citySlug}`,
+                "breadcrumb": {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+                    { "@type": "ListItem", "position": 2, "name": cfg.categoryTitle, "item": `${SITE_URL}${cfg.prefix}/${regionSlug}` },
+                    { "@type": "ListItem", "position": 3, "name": regionName, "item": `${SITE_URL}${cfg.prefix}/${regionSlug}` },
+                    { "@type": "ListItem", "position": 4, "name": cityName, "item": `${SITE_URL}${cfg.prefix}/${regionSlug}/${citySlug}` }
+                  ]
+                }
               }
             });
           }
@@ -721,7 +715,7 @@ async function runPrerender() {
   console.log(`\n========================================`);
   console.log(`SUCCESS: Pre-rendered ${generatedCount} total static HTML pages into dist/!`);
   console.log(`- 100% visible, semantic HTML (No hidden text or cloaking)`);
-  console.log(`- Full Schema.org JSON-LD (FAQPage, BreadcrumbList, BlogPosting, WebPage)`);
+  console.log(`- Full Schema.org JSON-LD (BreadcrumbList, BlogPosting, WebPage)`);
   console.log(`- Rich localized content, pricing tables, safety guidelines, and breadcrumbs`);
   console.log(`========================================\n`);
 }

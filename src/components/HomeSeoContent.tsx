@@ -17,37 +17,37 @@ const HomeSeoContent: React.FC = () => {
         {/* ── Top Header Badge & Title ── */}
         <div className="text-center max-w-4xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-[#f4b827]/30 text-[#f4b827] text-xs font-bold uppercase tracking-widest">
-            <Sparkles className="w-4 h-4" /> 100% Genuine & Verified Escort Directory (Koka Style)
+            <Sparkles className="w-4 h-4" /> Independent Adult Classifieds Directory
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
-            Comprehensive Call Girl & VIP Escort Services Guide
+            Adult Companions &amp; Wellness Services Directory Guide
           </h2>
           <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
-            Welcome to the most elegant and trusted adult directory, where class, passion, and discretion meet to offer you an unmatched companion experience. Whether you are a high-profile corporate executive traveling on business, a solo tourist exploring vibrant metro cities, or a local gentleman seeking refined adult companionship, our platform brings you verified profiles of high-class escorts, independent call girls, models, and massage therapists tailored to your exact desires. From intimate candlelit dinners at luxury restaurants to private, comfortable overnights in 5-star hotel suites, our service ensures total privacy, safety, and emotional satisfaction.
+            Welcome to Koka Site, an open classifieds directory connecting consenting adults with independent companions, escorts, and body massage practitioners across major cities in India. Browse listings by location, compare available service categories, and coordinate directly with independent advertisers.
           </p>
         </div>
 
-        {/* ── Highlight Banner: Cash Payment & No Advance ── */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-amber-950/40 via-zinc-900 to-zinc-950 border border-amber-500/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        {/* ── Highlight Banner: Safety & Payment Advisory ── */}
+        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-zinc-900 to-zinc-950 border border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="space-y-2 text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-2 text-emerald-400 font-bold text-sm">
-              <ShieldCheck className="w-5 h-5" /> 100% Cash On Delivery — Zero Advance Payment
+            <div className="flex items-center justify-center md:justify-start gap-2 text-amber-400 font-bold text-sm">
+              <ShieldCheck className="w-5 h-5" /> Safety Advisory — Avoid Advance Payments
             </div>
             <h2 className="text-xl sm:text-2xl font-bold text-white">
-              100% Cash on Meeting — Hand-to-Hand Payment
+              Direct Contact &amp; Payment Safety Advisory
             </h2>
-            <p className="text-xs sm:text-sm text-gray-300 max-w-2xl">
-              Pay face-to-face after meeting your selected companion. No online transfer, no advance deposit, and guaranteed 30-minute doorstep delivery to luxury hotels and residences.
+            <p className="text-xs sm:text-sm text-gray-300 max-w-2xl leading-relaxed">
+              Never send advance money, gift cards, or hotel booking deposits online before meeting in person. Independent advertisers manage their own schedules; discuss payment methods directly upon meeting.
             </p>
           </div>
-          <a 
-            href="https://api.whatsapp.com/send?phone=+918003381511&text=Hello%20KokaSite%20Booking" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="px-6 py-3.5 rounded-full bg-[#f4b827] text-black font-bold text-sm hover:bg-amber-400 transition-all shadow-lg flex items-center gap-2 shrink-0"
-          >
-            <Phone className="w-4 h-4" /> Book Via WhatsApp
-          </a>
+          <div className="flex items-center gap-3">
+            <a 
+              href="/service-areas" 
+              className="px-6 py-3.5 rounded-full bg-[#f4b827] text-black font-bold text-sm hover:bg-amber-400 transition-all shadow-lg flex items-center gap-2 shrink-0"
+            >
+              Explore Service Areas
+            </a>
+          </div>
         </div>
 
         {/* ── Grid of English Content Categories (~1500 words total) ── */}
@@ -285,19 +285,19 @@ const HomeSeoContent: React.FC = () => {
             {[
               {
                 q: "Is any advance payment required before meeting?",
-                a: "No! We operate on a strict 100% Cash on Delivery policy. You never need to transfer money online before meeting your companion. Pay hand-to-hand when she arrives at your hotel or incall location."
+                a: "Independent advertisers may request different arrangements, but we strongly advise users against sending advance payments or deposits to unknown parties. For safety, arrange payments directly in person upon meeting at verified venues."
               },
               {
-                q: "Are the photos on profiles real and verified?",
-                a: "Yes, all photos posted on Koka Site undergo a strict verification process. What you see on the profile is 100% genuine."
+                q: "Are profile listings and photos verified?",
+                a: "Listing profiles are submitted by independent advertisers. While community moderation and reporting tools are in place to remove abusive and misleading listings, users should always exercise standard personal discretion and report suspicious profiles."
               },
               {
-                q: "How fast is doorstep delivery to hotels?",
-                a: "Our companions usually arrive within 30 to 45 minutes of booking confirmation across all major hotel areas in your city."
+                q: "How does contacting an independent advertiser work?",
+                a: "Users can communicate directly with listed providers via the contact channels indicated on their public profiles. As an open classifieds portal, Koka Site does not act as an agency or intermediary."
               },
               {
-                q: "Is client confidentiality and privacy guaranteed?",
-                a: "Complete privacy is our highest priority. We do not store personal customer data, track browsing histories, or share information with any third parties."
+                q: "Is client confidentiality and privacy respected?",
+                a: "Koka Site does not collect unnecessary personal browsing identities or sell user details to third parties. We strongly recommend all visitors maintain their own digital privacy when contacting external numbers."
               }
             ].map((faq, idx) => (
               <div key={idx} className="rounded-2xl bg-zinc-900/80 border border-zinc-800 overflow-hidden">

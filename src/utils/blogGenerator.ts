@@ -10,7 +10,7 @@ const exoticBlogChunks = [
     
     "There's something incredibly hot about arriving at your luxury hotel room and finding a gorgeous woman waiting for you. That's the beauty of hiring a Call Girl in [CITY]. You skip all the awkward small talk of dating apps and get straight to the chemistry. Plus, it's 100% confidential. No digital trail, just cash and a great night.",
     
-    "We recently caught up with one of the top girls in the area, [MODEL], and asked her what guys actually want. Her answer? 'They want to feel like they aren't being judged.' That's exactly why guys keep booking her. A session with [MODEL] is a judgment-free zone where you can ask for exactly what you want—whether that's a sweet, romantic experience or something significantly much wilder.",
+    "Communication is essential when arranging companionship. Clearly discussing boundaries, expectations, and timing before confirming an appointment ensures both parties feel comfortable and respected. When expectations are aligned, dates flow smoothly and comfortably.",
     
     "One trend we are seeing massive growth in is the demand for mature women. Young models are great, but there is an undeniable appeal to Housewife Call girls [CITY]. They bring a level of passion, experience, and raw hunger to the bedroom that younger girls simply haven't learned yet. It's a completely different vibe that leaves guys totally speechless.",
     
@@ -30,7 +30,7 @@ const exoticBlogChunks = [
     
     "Sometimes, men are intimidated by the booking process. Don't be. Professional Escort Service [CITY] providers handle this every single day. Send a polite WhatsApp message stating your location, how long you want to meet, and what you're looking for. Keep it simple and respectful, and you'll have an incredible date set up in less than five minutes.",
     
-    "One of our favorites, [MODEL], shared her craziest story with us recently. 'I had a guy book me for 12 hours just so we could explore every single room in his penthouse,' she laughed. That's the beauty of Independent Call Girls [CITY]. There are absolutely no rules other than the ones you agree on together.",
+    "Flexibility in scheduling is a key benefit of independent companionship. Whether clients need short-term companionship for a dinner or extended overnight coordination for business travel, clear communication regarding schedule and terms helps ensure a pleasant, stress-free engagement.",
     
     "High-class independent models have completely taken over the premium scene here, and for good reason. They are stunning, adventurous, and incredibly professional. If you haven't experienced the passionate energy of a top-tier beauty, you are seriously missing out on one of the greatest pleasures available in this city.",
     
@@ -43,134 +43,46 @@ const exoticBlogChunks = [
     "Bottom line: life is way too short to spend your evenings alone in a hotel room. The companionship, the thrill, and the incredible physical release offered by a top-tier Escort Service [CITY] are just a few clicks away. Browse the directories, find a girl whose photos make your heart skip a beat, and go have the best night of your week."
 ];
 
-const keywordUrlMap: Record<string, string> = {
-  "coimbatore": "https://in.kokasite.com/call-girls/coimbatore",
-  "jaipur": "https://in.kokasite.com/call-girls/jaipur",
-  "kerala": "https://in.kokasite.com/call-girls/state/kerala",
-  "varanasi": "https://in.kokasite.com/call-girls/varanasi",
-  "tamil-nadu": "https://in.kokasite.com/call-girls/state/tamil-nadu",
-  "tamil nadu": "https://in.kokasite.com/call-girls/state/tamil-nadu",
-  "digha": "https://in.kokasite.com/call-girls/digha",
-  "shimoga": "https://in.kokasite.com/call-girls/shimoga",
-  "salem": "https://in.kokasite.com/call-girls/salem",
-  "delhi": "https://in.kokasite.com/call-girls/delhi",
-  "hassan": "https://in.kokasite.com/call-girls/hassan",
-  "guntur": "https://in.kokasite.com/call-girls/guntur",
-  "vijayawada": "https://in.kokasite.com/call-girls/vijayawada",
-  "ooty": "https://in.kokasite.com/call-girls/ooty",
-  "tumkur": "https://in.kokasite.com/call-girls/tumkur",
-  "mathura": "https://in.kokasite.com/call-girls/mathura",
-  "ujjain": "https://in.kokasite.com/call-girls/ujjain",
-  "assam": "https://in.kokasite.com/call-girls/state/assam",
-  "ghaziabad": "https://in.kokasite.com/call-girls/ghaziabad",
-  "home": "https://in.kokasite.com/",
-  "kumbakonam": "https://in.kokasite.com/call-girls/kumbakonam",
-  "kalaburagi": "https://in.kokasite.com/call-girls/kalaburagi",
-  "surat": "https://in.kokasite.com/call-girls/surat",
-  "tiruppur": "https://in.kokasite.com/call-girls/tiruppur",
-  "trichy": "https://in.kokasite.com/call-girls/trichy",
-  "manipal": "https://in.kokasite.com/call-girls/manipal",
-  "bareilly": "https://in.kokasite.com/call-girls/bareilly",
-  "nellore": "https://in.kokasite.com/call-girls/nellore",
-  "tirupati": "https://in.kokasite.com/call-girls/tirupati",
-  "bihar": "https://in.kokasite.com/call-girls/state/bihar",
-  "ahmedabad": "https://in.kokasite.com/call-girls/ahmedabad",
-  "bengaluru": "https://in.kokasite.com/call-girls/bengaluru",
-  "bangalore": "https://in.kokasite.com/call-girls/bengaluru",
-  "hyderabad": "https://in.kokasite.com/call-girls/hyderabad",
-  "karnataka": "https://in.kokasite.com/call-girls/state/karnataka",
-  "kannur": "https://in.kokasite.com/call-girls/kannur",
-  "vellore": "https://in.kokasite.com/call-girls/vellore",
-  "ludhiana": "https://in.kokasite.com/call-girls/ludhiana",
-  "chennai": "https://in.kokasite.com/call-girls/chennai",
-  "andhra-pradesh": "https://in.kokasite.com/call-girls/state/andhra-pradesh-locations",
-  "andhra pradesh": "https://in.kokasite.com/call-girls/state/andhra-pradesh-locations",
-  "kalyan": "https://in.kokasite.com/call-girls/kalyan",
-  "muzaffarpur": "https://in.kokasite.com/call-girls/muzaffarpur",
-  "dharwad": "https://in.kokasite.com/call-girls/dharwad",
-  "siliguri": "https://in.kokasite.com/call-girls/siliguri",
-  "allahabad": "https://in.kokasite.com/call-girls/allahabad",
-  "kottakkal": "https://in.kokasite.com/call-girls/kottakkal",
-  "nagercoil": "https://in.kokasite.com/call-girls/nagercoil",
-  "bhilwara": "https://in.kokasite.com/call-girls/bhilwara",
-  "jhansi": "https://in.kokasite.com/call-girls/jhansi",
-  "dehradun": "https://in.kokasite.com/call-girls/dehradun",
-  "anantapur": "https://in.kokasite.com/call-girls/anantapur",
-  "agra": "https://in.kokasite.com/call-girls/agra",
-  "pratapgarh": "https://in.kokasite.com/call-girls/pratapgarh",
-  "mysuru": "https://in.kokasite.com/call-girls/mysuru",
-  "mysore": "https://in.kokasite.com/call-girls/mysuru",
-  "kadapa": "https://in.kokasite.com/call-girls/kadapa",
-  "pune": "https://in.kokasite.com/call-girls/pune",
-  "neemrana": "https://in.kokasite.com/call-girls/neemrana",
-  "west-bengal": "https://in.kokasite.com/call-girls/west-bengal",
-  "west bengal": "https://in.kokasite.com/call-girls/west-bengal",
-  "vadodara": "https://in.kokasite.com/call-girls/vadodara",
-  "chittorgarh": "https://in.kokasite.com/call-girls/chittorgarh",
-  "angul": "https://in.kokasite.com/call-girls/angul",
-  "aluva": "https://in.kokasite.com/call-girls/aluva",
-  "muzaffarnagar": "https://in.kokasite.com/call-girls/muzaffarnagar",
-  "ambikapur": "https://in.kokasite.com/call-girls/ambikapur",
-  "keonjhar": "https://in.kokasite.com/call-girls/keonjhar",
-  "kendrapara": "https://in.kokasite.com/call-girls/kendrapara",
-  "kollam": "https://in.kokasite.com/call-girls/kollam",
-  "patna": "https://in.kokasite.com/call-girls/patna",
-  "nabarangpur": "https://in.kokasite.com/call-girls/nabarangpur",
-  "navi-mumbai": "https://in.kokasite.com/call-girls/navi-mumbai",
-  "navi mumbai": "https://in.kokasite.com/call-girls/navi-mumbai",
-  "dankuni": "https://in.kokasite.com/call-girls/dankuni",
-  "muvattupuzha": "https://in.kokasite.com/call-girls/muvattupuzha",
-  "nayagarh": "https://in.kokasite.com/call-girls/nayagarh",
-  "kolkata": "https://in.kokasite.com/call-girls/kolkata",
-  "nagaur": "https://in.kokasite.com/call-girls/nagaur",
-  "paschim-medinipur": "https://in.kokasite.com/call-girls/paschim-medinipur",
-  "paschim medinipur": "https://in.kokasite.com/call-girls/paschim-medinipur",
-  "hoshiarpur": "https://in.kokasite.com/call-girls/hoshiarpur",
-  "himachal-pradesh": "https://in.kokasite.com/call-girls/state/himachal-pradesh",
-  "himachal pradesh": "https://in.kokasite.com/call-girls/state/himachal-pradesh",
-  "kurnool": "https://in.kokasite.com/call-girls/kurnool",
-  "rajasthan": "https://in.kokasite.com/call-girls/state/rajasthan-locations",
-  "bettiah": "https://in.kokasite.com/call-girls/bettiah",
-  "rewari": "https://in.kokasite.com/call-girls/rewari",
-  "thiruvallur": "https://in.kokasite.com/call-girls/thiruvallur",
-  "hojai": "https://in.kokasite.com/call-girls/hojai",
-  "kokrajhar": "https://in.kokasite.com/call-girls/kokrajhar",
-  "gandhinagar": "https://in.kokasite.com/call-girls/gandhinagar",
-  "jodhpur": "https://in.kokasite.com/call-girls/jodhpur",
-  "kangra": "https://in.kokasite.com/call-girls/kangra",
-  "kamrej": "https://in.kokasite.com/call-girls/kamrej",
-  "rayagada": "https://in.kokasite.com/call-girls/rayagada",
-  "jammu-and-kashmir": "https://in.kokasite.com/call-girls/state/jammu-and-kashmir",
-  "jammu and kashmir": "https://in.kokasite.com/call-girls/state/jammu-and-kashmir",
-  "chiplun": "https://in.kokasite.com/call-girls/chiplun",
-  "ranebennur": "https://in.kokasite.com/call-girls/ranebennur",
-  "kadiri": "https://in.kokasite.com/call-girls/kadiri",
-  "khagaria": "https://in.kokasite.com/call-girls/khagaria",
-  "hubli": "https://in.kokasite.com/call-girls/hubli",
-  "buxar": "https://in.kokasite.com/call-girls/buxar",
-  "ramanagara": "https://in.kokasite.com/call-girls/ramanagara",
-  "north-delhi": "https://in.kokasite.com/call-girls/north-delhi",
-  "north delhi": "https://in.kokasite.com/call-girls/north-delhi",
-  "west-delhi": "https://in.kokasite.com/call-girls/west-delhi",
-  "west delhi": "https://in.kokasite.com/call-girls/west-delhi",
-  "matheran": "https://in.kokasite.com/call-girls/matheran",
-  "thalassery": "https://in.kokasite.com/call-girls/thalassery",
-  "wardha": "https://in.kokasite.com/call-girls/wardha",
-  "solapur": "https://in.kokasite.com/call-girls/solapur",
-  "dibrugarh": "https://in.kokasite.com/call-girls/dibrugarh",
-  "meerut": "https://in.kokasite.com/call-girls/meerut",
-  "damoh": "https://in.kokasite.com/call-girls/damoh",
-  "bijapur": "https://in.kokasite.com/massage/bijapur",
-  "jharkhand": "https://in.kokasite.com/call-girls/state/jharkhand-locations",
-  "lakhisarai": "https://in.kokasite.com/call-girls/lakhisarai"
-};
+import { getCityFromSlug, getStateFromSlug } from '../data/worldCities';
 
-const topLocationsList = Object.entries(keywordUrlMap)
-    .filter(([name]) => name !== "home" && !name.includes(" "))
-    .map(([name, url]) => ({
-        name: name.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" "),
-        url
-    }));
+const featuredLocations = [
+    { name: "Mumbai", stateSlug: "maharashtra", citySlug: "mumbai" },
+    { name: "Delhi", stateSlug: "delhi-ncr", citySlug: "delhi" },
+    { name: "Bengaluru", stateSlug: "karnataka", citySlug: "bengaluru" },
+    { name: "Kolkata", stateSlug: "west-bengal", citySlug: "kolkata" },
+    { name: "Hyderabad", stateSlug: "telangana", citySlug: "hyderabad" },
+    { name: "Chennai", stateSlug: "tamil-nadu", citySlug: "chennai" },
+    { name: "Pune", stateSlug: "maharashtra", citySlug: "pune" },
+    { name: "Ahmedabad", stateSlug: "gujarat", citySlug: "ahmedabad" },
+    { name: "Jaipur", stateSlug: "rajasthan", citySlug: "jaipur" },
+    { name: "Goa (Panaji)", stateSlug: "goa", citySlug: "panaji" },
+    { name: "Chandigarh", stateSlug: "punjab", citySlug: "chandigarh" },
+    { name: "Lucknow", stateSlug: "uttar-pradesh", citySlug: "lucknow" },
+    { name: "Kochi", stateSlug: "kerala", citySlug: "kochi" },
+    { name: "Patna", stateSlug: "bihar", citySlug: "patna" },
+    { name: "Indore", stateSlug: "madhya-pradesh", citySlug: "indore" },
+    { name: "Surat", stateSlug: "gujarat", citySlug: "surat" },
+    { name: "Nagpur", stateSlug: "maharashtra", citySlug: "nagpur" },
+    { name: "Varanasi", stateSlug: "uttar-pradesh", citySlug: "varanasi" },
+    { name: "Coimbatore", stateSlug: "tamil-nadu", citySlug: "coimbatore" },
+    { name: "Dehradun", stateSlug: "uttarakhand", citySlug: "dehradun" },
+].map(loc => ({
+    name: loc.name,
+    url: `https://in.kokasite.com/call-girls/${loc.stateSlug}/${loc.citySlug}`
+}));
+
+function getCanonicalLocationUrl(keywordOrSlug: string): string {
+    const clean = keywordOrSlug.toLowerCase().trim().replace(/\s+/g, '-');
+    const cityData = getCityFromSlug(clean);
+    if (cityData) {
+        return `https://in.kokasite.com/call-girls/${cityData.state.slug}/${cityData.city.slug}`;
+    }
+    const stateData = getStateFromSlug(clean);
+    if (stateData) {
+        return `https://in.kokasite.com/call-girls/${stateData.slug}`;
+    }
+    return `https://in.kokasite.com/service-areas`;
+}
 
 export function generateMegaBlogPost(seed: number, city: string, modelName: string, image: string): any {
     const cleanCity = city.split(" –")[0].split(" -")[0].trim();
@@ -191,17 +103,13 @@ export function generateMegaBlogPost(seed: number, city: string, modelName: stri
 
     let contentString = selectedChunks.join("\n\n");
 
-    // Resolve clean link URL from map or fallback
-    const lookupKey = cleanCity.toLowerCase().trim();
-    const targetUrl = keywordUrlMap[lookupKey] || `https://in.kokasite.com/call-girls/${citySlug}`;
-
-    // Resolve kokasite.com city page URL
+    // Resolve canonical city page URL
     const cityData = getCityFromSlug(citySlug);
     const kokaCityUrl = cityData 
         ? `https://in.kokasite.com/call-girls/${cityData.state.slug}/${citySlug}`
-        : `https://in.kokasite.com/call-girls/india/${citySlug}`;
+        : getCanonicalLocationUrl(cleanCity);
 
-    // Add up to 3-4 internal links for SEO to boost interlinking
+    // Add internal links pointing strictly to canonical URLs
     const possibleKeywords = [
         `Call Girls in ${cleanCity}`,
         `Escort Service ${cleanCity}`,
@@ -214,9 +122,8 @@ export function generateMegaBlogPost(seed: number, city: string, modelName: stri
     let linkCount = 0;
     for (let i = 0; i < possibleKeywords.length; i++) {
         const kw = possibleKeywords[i];
-        if (contentString.includes(kw) && linkCount < 4) {
-            const url = (i % 2 === 0) ? targetUrl : kokaCityUrl;
-            const linkHtml = `<a href="${url}" class="text-pink-600 font-bold hover:text-pink-800 underline decoration-pink-300 underline-offset-2 transition-colors">${kw}</a>`;
+        if (contentString.includes(kw) && linkCount < 3) {
+            const linkHtml = `<a href="${kokaCityUrl}" class="text-pink-600 font-bold hover:text-pink-800 underline decoration-pink-300 underline-offset-2 transition-colors">${kw}</a>`;
             contentString = contentString.replace(kw, linkHtml);
             linkCount++;
         }
@@ -224,9 +131,9 @@ export function generateMegaBlogPost(seed: number, city: string, modelName: stri
 
     // Select 3 random locations to cross-link
     const cleanLookup = cleanCity.toLowerCase().trim();
-    const otherLocations = topLocationsList.filter(loc => loc.name.toLowerCase() !== cleanLookup);
+    const otherLocations = featuredLocations.filter(loc => loc.name.toLowerCase() !== cleanLookup);
     
-    const selectedLocs: typeof topLocationsList = [];
+    const selectedLocs: typeof featuredLocations = [];
     let tempLocs = [...otherLocations];
     for (let i = 0; i < 3 && tempLocs.length > 0; i++) {
         const idx = (seed + i) % tempLocs.length;
@@ -236,7 +143,7 @@ export function generateMegaBlogPost(seed: number, city: string, modelName: stri
 
     if (selectedLocs.length > 0) {
         const linkList = selectedLocs.map(loc => `<a href="${loc.url}" class="text-pink-600 hover:text-pink-800 underline decoration-pink-300 transition-colors font-bold">${loc.name}</a>`).join(", ");
-        contentString += `\n\nAlso, if you plan to visit other destinations, don't miss our premium independent directories for ${linkList}.`;
+        contentString += `\n\nAlso, if you plan to visit other destinations, don't miss our independent directories for ${linkList}.`;
     }
 
     const titleTemplates = [

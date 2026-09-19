@@ -47,34 +47,29 @@ const cityTierMap: Record<string, { label: string; emoji: string; description: s
 };
 
 const citySeoTitles = [
-    "Verified Call Girls in {City} | Independent Escort Directory",
-    "{City} Call Girls | Verified Companions & VIP Escorts",
-    "Independent Escorts in {City} - Call Girls Directory - Koka Site",
-    "Book Call Girls in {City} | 100% Cash on Delivery & 24/7 Service",
-    "VIP Escorts & Call Girls in {City} | Direct WhatsApp Booking"
+    "{City} Call Girls & Escorts Directory | Koka Site",
+    "Independent Escorts in {City} | Call Girls Directory - Koka Site",
+    "Verified Companions & Escorts in {City} | Koka Site",
+    "{City} Escort Services & Independent Call Girls | Koka Site",
 ];
 
 const citySeoDescriptions = [
-    "Looking for verified call girls in {City}? Koka Site features genuine independent escorts and companion services with instant WhatsApp booking and zero advance.",
-    "Book premium call girls and VIP escorts in {City}. Browse verified profiles with real photos, transparent rates, and convenient cash on delivery.",
-    "Discover verified independent call girls and escort services across {City}. Enjoy discreet meetings, prompt hotel outcalls, and 24/7 availability.",
-    "Connect directly with independent companions in {City}. Vetted profiles, genuine unedited photos, and hand-to-hand cash payment upon meeting."
+    "Explore independent call girls and companion advertisements across {City} on Koka Site. Browse profiles, contact details, and local directory listings.",
+    "Find independent escorts and companion services in {City}. Browse profiles with photos and transparent service details on Koka Site.",
+    "Discover independent call girls and escort directory listings in {City}. Connect directly with independent advertisers across prime localities on Koka Site.",
 ];
 
 const massageSeoTitles = [
-    "Best Body Massage in {City} | Verified Massage Services",
-    "{City} Massage | Professional Massage Parlors in {City}",
-    "{City} Body to Body Massage | B2B Massage {City} - Koka Site",
-    "Independent Massage Therapists in {City} - Nuru Massage",
-    "Book Premium Body Massage in {City} 24/7 Cash Payment",
-    "{City} Spa and Massage Services | Relaxation Therapy",
-    "Full Body Massage in {City} | Book Your Relaxation Session"
+    "{City} Body Massage & Wellness Spa Directory | Koka Site",
+    "Body Massage Services in {City} | Professional Therapists - Koka Site",
+    "Full Body Massage & Spa in {City} | Koka Site Directory",
+    "{City} Massage Therapists & Wellness Centers | Koka Site",
 ];
 
 const massageSeoDescriptions = [
-    "Looking for the best body massage services in {City}? Koka Site lists verified massage therapists, Nuru massage, and body to body (B2B) massage sessions.",
-    "Book premium full body massage in {City}. Enjoy professional, relaxing therapies from independent therapists at the best prices with zero advance payment.",
-    "Relax and refresh with Nuru and body to body massage services in {City}. Connect directly with certified therapists nearby on Koka Site."
+    "Browse independent body massage therapists and wellness spa listings in {City} on Koka Site. Connect directly with local service providers.",
+    "Find relaxing body massage and wellness services in {City}. Explore local therapist advertisements and therapy details on Koka Site.",
+    "Discover body massage therapists and spa centers across {City}. Contact independent practitioners directly for appointments on Koka Site.",
 ];
 
 const getIndexFromSeed = (seedStr: string, max: number) => {
@@ -145,7 +140,33 @@ const CitySEOPage: React.FC<CitySEOPageProps> = ({ categoryType = 'call-girl' })
     if (isState) {
         const stateInfo = getStateFromSlug(stateSlug || "");
         if (!stateInfo) {
-            return <Navigate to="/" replace />;
+            return (
+                <div className="min-h-screen bg-[#121214] text-gray-100 font-body">
+                    <SEO 
+                        title="Region Not Found | Koka Site" 
+                        description="The requested state or region directory was not found on Koka Site." 
+                        noindex={true}
+                    />
+                    <Header />
+                    <main className="pt-36 pb-24 max-w-[800px] mx-auto px-4 text-center">
+                        <div className="p-8 sm:p-12 rounded-3xl bg-zinc-900/80 border border-zinc-800">
+                            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">Location Not Found</h1>
+                            <p className="text-gray-400 text-sm sm:text-base mb-8">
+                                The requested region or state directory could not be located in our directory. Please browse our active service areas across India.
+                            </p>
+                            <div className="flex justify-center gap-4 flex-wrap">
+                                <Link to="/service-areas" className="px-6 py-3 bg-[#f4b827] text-black font-bold rounded-xl text-sm hover:bg-amber-400 transition-all">
+                                    Browse All Service Areas
+                                </Link>
+                                <Link to="/" className="px-6 py-3 bg-zinc-800 text-white font-bold rounded-xl text-sm hover:bg-zinc-700 transition-all">
+                                    Return to Home
+                                </Link>
+                            </div>
+                        </div>
+                    </main>
+                    <Footer />
+                </div>
+            );
         }
         dynamicCityName = stateInfo.name;
         dynamicStateName = "";
@@ -153,7 +174,33 @@ const CitySEOPage: React.FC<CitySEOPageProps> = ({ categoryType = 'call-girl' })
     } else {
         const cityInfo = getCityFromSlug(citySlug);
         if (!cityInfo) {
-            return <Navigate to="/" replace />;
+            return (
+                <div className="min-h-screen bg-[#121214] text-gray-100 font-body">
+                    <SEO 
+                        title="City Not Found | Koka Site" 
+                        description="The requested city directory was not found on Koka Site." 
+                        noindex={true}
+                    />
+                    <Header />
+                    <main className="pt-36 pb-24 max-w-[800px] mx-auto px-4 text-center">
+                        <div className="p-8 sm:p-12 rounded-3xl bg-zinc-900/80 border border-zinc-800">
+                            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">City Not Found</h1>
+                            <p className="text-gray-400 text-sm sm:text-base mb-8">
+                                The city directory you are looking for does not exist or has moved. Please explore our verified locations by state.
+                            </p>
+                            <div className="flex justify-center gap-4 flex-wrap">
+                                <Link to="/service-areas" className="px-6 py-3 bg-[#f4b827] text-black font-bold rounded-xl text-sm hover:bg-amber-400 transition-all">
+                                    Browse All Service Areas
+                                </Link>
+                                <Link to="/" className="px-6 py-3 bg-zinc-800 text-white font-bold rounded-xl text-sm hover:bg-zinc-700 transition-all">
+                                    Return to Home
+                                </Link>
+                            </div>
+                        </div>
+                    </main>
+                    <Footer />
+                </div>
+            );
         }
         dynamicCityName = cityInfo.city.name;
         dynamicStateName = cityInfo.state.name;
@@ -203,15 +250,15 @@ const CitySEOPage: React.FC<CitySEOPageProps> = ({ categoryType = 'call-girl' })
         intro: stateData.intro,
     } : {
         title: categoryType === 'massage' 
-            ? `Verified ${dynamicCityName} Massage Services & Spa | Koka Site` 
-            : `Verified ${dynamicCityName} Escorts and Call Girls | Koka Site`,
+            ? `${dynamicCityName} Massage Services & Spa Directory | Koka Site` 
+            : `${dynamicCityName} Escorts and Call Girls Directory | Koka Site`,
         metaDesc: categoryType === 'massage'
-            ? `Discover verified body massage services and wellness spas in ${dynamicCityName} on Koka Site.`
-            : `Discover verified call girls and premium ${dynamicCityName} escorts. Find the best independent providers on Koka Site.`,
+            ? `Discover body massage services and wellness spas in ${dynamicCityName} on Koka Site.`
+            : `Discover call girls and independent ${dynamicCityName} escorts. Find service listings on Koka Site.`,
         h1: categoryType === 'massage' ? `${dynamicCityName} Massage Services` : `${dynamicCityName} Escorts & Call Girls`,
         intro: categoryType === 'massage'
-            ? `Explore our comprehensive directory of verified massage services and wellness centers in ${dynamicCityName}. Find affordable and premium massage on Koka Site.`
-            : `Explore our comprehensive directory of verified call girls and high-end escorts in ${dynamicCityName}. Find affordable and premium companions on Koka Site.`,
+            ? `Explore our directory of massage services and wellness centers in ${dynamicCityName}. Find independent practitioner listings on Koka Site.`
+            : `Explore our directory of independent call girls and escorts in ${dynamicCityName}. Find verified companion listings on Koka Site.`,
     })
     : {
         title: generatedTitle.replace(/&/g, "and"),
@@ -219,8 +266,8 @@ const CitySEOPage: React.FC<CitySEOPageProps> = ({ categoryType = 'call-girl' })
         h1: generatedTitle.replace(/&/g, "and"),
         content: pageData ? pageData.content : undefined,
         intro: categoryType === 'massage'
-            ? `Welcome to Koka Site's ${dynamicCityName} massage directory — your destination for verified body massage and therapy. Browse our curated listings.`
-            : `Welcome to Koka Site's ${dynamicCityName} call girl directory — your destination for premium, verified companions. Browse our curated listings.`,
+            ? `Welcome to Koka Site's ${dynamicCityName} massage directory — browse local body massage and therapy listings.`
+            : `Welcome to Koka Site's ${dynamicCityName} companion directory — browse independent companion and escort listings.`,
     };
 
     const prefixPath = categoryType === 'call-girl' ? 'call-girls' : 'massage';
@@ -261,8 +308,8 @@ const CitySEOPage: React.FC<CitySEOPageProps> = ({ categoryType = 'call-girl' })
                     {
                         "@type": "ListItem",
                         "position": 2,
-                        "name": "Search",
-                        "item": `${SITE_URL}search`
+                        "name": "Service Areas",
+                        "item": `${SITE_URL}service-areas`
                     },
                     ...(dynamicStateName ? [{
                         "@type": "ListItem",
@@ -275,55 +322,6 @@ const CitySEOPage: React.FC<CitySEOPageProps> = ({ categoryType = 'call-girl' })
                         "position": dynamicStateName ? 4 : 3,
                         "name": cityName,
                         "item": currentUrl
-                    }
-                ]
-            },
-            {
-                "@type": "Service",
-                "@id": `${currentUrl}#service`,
-                "name": `${cityName} ${categoryType === 'massage' ? 'Massage' : 'Escort'} Service`,
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Koka Site",
-                    "url": SITE_URL
-                },
-                "areaServed": {
-                    "@type": "City",
-                    "name": cityName
-                },
-                "serviceType": categoryType === 'massage' ? "Body Massage Directory" : "Escort Classifieds Directory"
-            },
-            {
-                "@type": "FAQPage",
-                "@id": `${currentUrl}#faq`,
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": categoryType === 'massage' ? `How to book body massage in ${cityName}?` : `How to book call girls in ${cityName}?`,
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": categoryType === 'massage'
-                                ? `To book a body massage service in ${cityName}, browse the verified listings on Koka Site, select a therapist, and click the Call or WhatsApp button to connect directly.`
-                                : `To book verified call girls in ${cityName}, browse the listings on Koka Site, select a profile, and click the Call or WhatsApp button to connect directly.`
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": categoryType === 'massage' ? `What are the rates of body massage in ${cityName}?` : `What are the rates of escort services in ${cityName}?`,
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": categoryType === 'massage'
-                                ? `Massage rates in ${cityName} start from ${currencySymbol}1,500 to ${currencySymbol}3,000 per hour depending on Nuru, Swedish, or B2B session types.`
-                                : `Escort rates in ${cityName} start from ${currencySymbol}2,999 per hour depending on Diamond, Gold, or Silver collections.`
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": `Is advance payment required before meeting in ${cityName}?`,
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": `No advance payment is required. We strictly enforce 100% cash payment hand-to-hand upon meeting your selected companion in ${cityName}.`
-                        }
                     }
                 ]
             }
@@ -422,18 +420,18 @@ const CitySEOPage: React.FC<CitySEOPageProps> = ({ categoryType = 'call-girl' })
                             {/* Stats */}
                             <div className="flex items-center gap-6 flex-shrink-0">
                                 <div className="text-center">
-                                    <div className="text-2xl font-display font-bold text-white">{totalCount * 47}+</div>
-                                    <div className="text-gray-500 text-[10px] uppercase tracking-widest mt-1">Active Listings</div>
+                                    <div className="text-2xl font-display font-bold text-white">{totalCount}+</div>
+                                    <div className="text-gray-500 text-[10px] uppercase tracking-widest mt-1">Directory Profiles</div>
                                 </div>
                                 <div className="w-[1px] h-10 bg-zinc-800" />
                                 <div className="text-center">
-                                    <div className="text-2xl font-display font-bold text-[#f4b827]">{Math.round(totalCount * 0.85 * 47)}+</div>
-                                    <div className="text-gray-500 text-[10px] uppercase tracking-widest mt-1">Verified</div>
+                                    <div className="text-2xl font-display font-bold text-[#f4b827]">Direct</div>
+                                    <div className="text-gray-500 text-[10px] uppercase tracking-widest mt-1">Contact</div>
                                 </div>
                                 <div className="w-[1px] h-10 bg-zinc-800" />
                                 <div className="text-center">
-                                    <div className="text-2xl font-display font-bold text-amber-500">{Math.round(totalCount * 0.3 * 47)}+</div>
-                                    <div className="text-gray-500 text-[10px] uppercase tracking-widest mt-1">Online Now</div>
+                                    <div className="text-2xl font-display font-bold text-amber-500">18+</div>
+                                    <div className="text-gray-500 text-[10px] uppercase tracking-widest mt-1">Adult Only</div>
                                 </div>
                             </div>
                         </div>
@@ -647,16 +645,19 @@ const CitySEOPage: React.FC<CitySEOPageProps> = ({ categoryType = 'call-girl' })
                             ))}
                         </div>
 
-                        <div className="bg-gradient-to-r from-emerald-950 to-zinc-900 border border-emerald-500/20 rounded-2xl p-8 text-center mt-8 relative overflow-hidden shadow-lg">
-                            <h3 className="text-[#f4b827] text-xl md:text-2xl font-bold mb-4 flex items-center justify-center gap-3">
-                                💬 WhatsApp Now to Book!
+                        <div className="bg-gradient-to-r from-zinc-900 to-zinc-950 border border-zinc-800 rounded-2xl p-8 text-center mt-8 relative overflow-hidden shadow-lg">
+                            <h3 className="text-[#f4b827] text-xl font-bold mb-3 flex items-center justify-center gap-3">
+                                🛡️ Safety &amp; Directory Advisory
                             </h3>
-                            <p className="font-bold text-gray-450 flex flex-wrap items-center justify-center gap-2 gap-y-4 tracking-widest uppercase text-xs">
-                                <span>Available 24/7</span>
-                                <span className="text-zinc-700 hidden sm:inline">|</span>
-                                <span>Cash Only</span>
-                                <span className="text-zinc-700 hidden sm:inline">|</span>
-                                <span>100% Genuine Sessions</span>
+                            <p className="text-gray-300 text-sm max-w-2xl mx-auto leading-relaxed mb-4">
+                                Koka Site is an independent adult classified advertising directory. We advise all users to verify details directly with independent advertisers and never transfer online advances or booking deposits before meeting in person.
+                            </p>
+                            <p className="font-semibold text-gray-500 flex flex-wrap items-center justify-center gap-2 gap-y-2 tracking-wider uppercase text-xs">
+                                <span>Independent Listings</span>
+                                <span className="text-zinc-700 hidden sm:inline">•</span>
+                                <span>No Online Deposits</span>
+                                <span className="text-zinc-700 hidden sm:inline">•</span>
+                                <span>18+ Consenting Adults</span>
                             </p>
                         </div>
                     </div>

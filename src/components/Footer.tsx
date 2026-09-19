@@ -144,12 +144,12 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-gray-500 leading-relaxed text-[13px] pr-4">
-              Premium global verified directory. Real profiles, real photos, complete discretion. Available 24/7. We provide the most trusted portal to find elite, independent companions and massage providers near you.
+              Open classifieds directory for independent companions and wellness providers across India. Focused on privacy, transparency, and direct communication.
             </p>
             {/* Trust tags */}
             <div className="flex flex-wrap gap-2 pt-1">
               <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-500 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
-                <Shield className="w-3 h-3" /> 100% Verified
+                <Shield className="w-3 h-3" /> Moderated Listings
               </span>
               <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-amber-500 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-full">
                 🔞 18+ Only
@@ -160,9 +160,9 @@ const Footer = () => {
             </div>
             {/* Quick actions */}
             <div className="flex flex-col gap-2 pt-4">
-              <a href="https://api.whatsapp.com/send?phone=+918003381511&text=Hello%20KokaSite" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[12px] font-bold text-[#f4b827] hover:underline">
-                <Phone className="w-3.5 h-3.5" /> List Your Profile
-              </a>
+              <Link to="/post-ad" className="inline-flex items-center gap-2 text-[12px] font-bold text-[#f4b827] hover:underline">
+                <Sparkles className="w-3.5 h-3.5" /> Post Free Classified
+              </Link>
             </div>
           </div>
 

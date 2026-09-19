@@ -32,14 +32,14 @@ export default async function handler(req, res) {
   try {
     // Send Notification Email to Admin/Report Handler
     const mailOptions = {
-      from: `"CallGirl4You System" <${process.env.SMTP_EMAIL || 'orbyzaseo@gmail.com'}>`,
+      from: `"Koka Site System" <${process.env.SMTP_EMAIL || 'support@kokasite.com'}>`,
       to: 'worksunil26@gmail.com',
       cc: 'orbyzaseo@gmail.com',
       subject: `🚨 Ad Reported: ${adName} (${adId})`,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; border: 1px solid #eee; border-radius: 10px; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #D91E18;">New Ad Report Alert</h2>
-          <p>A visitor has reported an ad on CallGirl4You. Details are provided below:</p>
+          <p>A visitor has reported an ad on Koka Site. Details are provided below:</p>
           
           <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
             <tr>
@@ -73,7 +73,7 @@ export default async function handler(req, res) {
             <a href="${profileUrl}" style="background-color: #D91E18; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">Review Reported Ad</a>
           </div>
           
-          <p style="color: #888; font-size: 12px; margin-top: 30px; text-align: center;">This is an automated notification from the CallGirl4You System.</p>
+          <p style="color: #888; font-size: 12px; margin-top: 30px; text-align: center;">This is an automated notification from the Koka Site System.</p>
         </div>
       `,
     };

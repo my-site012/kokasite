@@ -66,11 +66,20 @@ async function run() {
   const indiaCitiesMod = await loadTsModule('src/data/indiaCities.ts');
   const worldCitiesMod = await loadTsModule('src/data/worldCities.ts');
   const blogsMod = await loadTsModule('src/data/blogs.ts');
+  const seoContentMod = await loadTsModule('src/data/seoContent.ts');
 
   const indiaStates = indiaCitiesMod.indiaStates || [];
   const rawCountries = worldCitiesMod.rawCountries || [];
   const cityToRegionMap = worldCitiesMod.cityToRegionMap || {};
   const cityBlogs = blogsMod.cityBlogs || [];
+  const citySEOData = seoContentMod.citySEOData || {};
+
+  const topPrioritySlugs = new Set([
+    ...Object.keys(citySEOData),
+    'mumbai', 'delhi', 'bengaluru', 'bangalore', 'hyderabad', 'chennai', 'kolkata', 'pune',
+    'ahmedabad', 'jaipur', 'chandigarh', 'lucknow', 'indore', 'gurgaon', 'noida', 'surat',
+    'nagpur', 'kochi', 'patna', 'bhopal', 'panaji', 'calangute', 'goa', 'guwahati', 'dehradun'
+  ]);
 
   const indiaRegions = indiaStates.map(s => ({
     name: s.name,
@@ -174,11 +183,12 @@ async function run() {
           const cityKey = `${region.slug}/${city.slug}`;
           if (!addedCities.has(cityKey)) {
             addedCities.add(cityKey);
+            const isTopCity = topPrioritySlugs.has(city.slug);
             xml += `  <url>\n`;
             xml += `    <loc>${SITE_URL}${prefixPath}/${region.slug}/${city.slug}</loc>\n`;
             xml += `    <lastmod>${currentDate}</lastmod>\n`;
-            xml += `    <changefreq>daily</changefreq>\n`;
-            xml += `    <priority>0.9</priority>\n`;
+            xml += `    <changefreq>${isTopCity ? 'weekly' : 'monthly'}</changefreq>\n`;
+            xml += `    <priority>${isTopCity ? '0.9' : '0.6'}</priority>\n`;
             xml += `  </url>\n`;
           }
         });
@@ -243,7 +253,6 @@ Disallow: /admin/
 Disallow: /dashboard/
 Disallow: /login
 Disallow: /register
-Disallow: /post-ad
 Disallow: /create-profile
 Disallow: /api/
 Disallow: /search?

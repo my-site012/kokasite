@@ -94,7 +94,10 @@ export default async function handler(req, res) {
 
     if (req.method === 'POST') {
         const { password, settings } = req.body || {};
-        const correctPassword = process.env.ADMIN_PASSWORD || "admin123";
+        const correctPassword = process.env.ADMIN_PASSWORD;
+        if (!correctPassword) {
+            return res.status(500).json({ error: "Server Configuration Error: ADMIN_PASSWORD environment variable is not configured" });
+        }
         if (password !== correctPassword) {
             return res.status(401).json({ error: "Unauthorized: Incorrect Password" });
         }

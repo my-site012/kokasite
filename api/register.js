@@ -28,18 +28,18 @@ export default async function handler(req, res) {
   try {
     // 1. Send Activation/Welcome Email to the Client
     const clientMailOptions = {
-      from: `"CallGirl4You Support" <${process.env.SMTP_EMAIL || 'orbyzaseo@gmail.com'}>`,
+      from: `"Koka Site Support" <${process.env.SMTP_EMAIL || 'support@kokasite.com'}>`,
       to: email,
-      subject: 'Welcome to CallGirl4You - Account Activation',
+      subject: 'Welcome to Koka Site - Account Created',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #0d0d12; color: #ffffff;">
-          <h1 style="color: #df143c; text-align: center;">Welcome to CallGirl4You!</h1>
+          <h1 style="color: #f4b827; text-align: center;">Welcome to Koka Site!</h1>
           <p style="color: #cccccc;">Hello ${name || 'there'},</p>
           <p style="color: #cccccc;">Your <strong>${accountType}</strong> account has been successfully created.</p>
-          <p style="color: #cccccc;">We are thrilled to have you on board. You can now log in and start exploring or setting up your profile.</p>
+          <p style="color: #cccccc;">You can now manage your ads and directory listings on Koka Site.</p>
           <br/>
           <div style="text-align: center;">
-            <a href="https://callgirl4you.com/login" style="background-color: #df143c; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">Log In to Your Account</a>
+            <a href="https://in.kokasite.com/login" style="background-color: #f4b827; color: #09090b; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">Log In to Your Account</a>
           </div>
           <br/>
           <p style="color: #888888; font-size: 12px; text-align: center;">If you did not request this, please ignore this email.</p>
@@ -49,7 +49,7 @@ export default async function handler(req, res) {
 
     // 2. Send Notification Email to Admin
     const adminMailOptions = {
-      from: `"CallGirl4You System" <${process.env.SMTP_EMAIL || 'orbyzaseo@gmail.com'}>`,
+      from: `"Koka Site System" <${process.env.SMTP_EMAIL || 'support@kokasite.com'}>`,
       to: 'orbyzaseo@gmail.com',
       subject: `🚨 New Account Created: ${accountType.toUpperCase()}`,
       html: `

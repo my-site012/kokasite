@@ -63,7 +63,7 @@ const Index = () => {
         "@id": `${SITE_URL}#website`,
         "url": SITE_URL,
         "name": "Koka Site",
-        "description": "Premium Call Girl & Massage Services Directory - Verified Independent Escorts",
+        "description": "Independent Adult Classifieds & Body Massage Services Directory",
         "publisher": {
           "@id": `${SITE_URL}#organization`
         }
@@ -87,40 +87,6 @@ const Index = () => {
             "position": 1,
             "name": "Home",
             "item": SITE_URL
-          }
-        ]
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": `${SITE_URL}#localbusiness`,
-        "name": "Koka Site - Premium Adult & Massage Directory",
-        "url": SITE_URL,
-        "telephone": "+918003381511",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "IN"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${SITE_URL}#faq`,
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is any advance payment required before meeting on Koka Site?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No advance payment is required. We strictly enforce 100% Cash on Delivery (hand-to-hand payment) upon meeting your selected companion."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are profiles on Koka Site verified?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, profiles listed on Koka Site undergo verification to ensure genuine photos, accurate locations, and real contact numbers."
-            }
           }
         ]
       }
@@ -287,27 +253,27 @@ const Index = () => {
                   <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(244,184,39,0.05),transparent)] pointer-events-none" />
                   <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                       <div>
-                          <h2 className="text-3xl lg:text-4xl font-display font-bold mb-6">Our Commitment to <span className="text-[#f4b827]">Excellence</span></h2>
-                          <p className="text-gray-300 text-base mb-8 leading-relaxed">We maintain the highest standards of safety and discretion in the industry. Every profile undergoes a rigorous verification process to ensure authenticity.</p>
+                          <h2 className="text-3xl lg:text-4xl font-display font-bold mb-6">Our Commitment to <span className="text-[#f4b827]">Safety &amp; Transparency</span></h2>
+                          <p className="text-gray-300 text-base mb-8 leading-relaxed">We provide a transparent, moderated platform for independent companion and massage classifieds across India, prioritizing user privacy and clear communication.</p>
                           <div className="grid grid-cols-2 gap-6">
                               <div>
-                                  <div className="text-2xl font-bold text-[#f4b827] mb-1">100%</div>
-                                  <div className="text-xs uppercase tracking-widest text-gray-400 font-bold">Verified Photos</div>
+                                  <div className="text-2xl font-bold text-[#f4b827] mb-1">Direct</div>
+                                  <div className="text-xs uppercase tracking-widest text-gray-400 font-bold">Provider Contact</div>
                               </div>
                               <div>
-                                  <div className="text-2xl font-bold text-[#f4b827] mb-1">Secure</div>
-                                  <div className="text-xs uppercase tracking-widest text-gray-400 font-bold">Private Booking</div>
+                                  <div className="text-2xl font-bold text-[#f4b827] mb-1">Discreet</div>
+                                  <div className="text-xs uppercase tracking-widest text-gray-400 font-bold">User Privacy</div>
                               </div>
                           </div>
                       </div>
                       <div className="bg-black/20 backdrop-blur-sm p-8 rounded-3xl border border-zinc-800">
-                          <h3 className="text-lg font-bold mb-4">Quality Assurance</h3>
+                          <h3 className="text-lg font-bold mb-4">Platform Guidelines</h3>
                           <ul className="space-y-4">
                               {[
-                                  "Hand-picked and vetted companions",
-                                  "Direct contact with providers",
-                                  "No hidden agency fees or commissions",
-                                  "24/7 dedicated support via WhatsApp"
+                                  "Independent advertisers and therapists",
+                                  "Direct contact with zero middlemen",
+                                  "Advisory against sending online advance fees",
+                                  "Active ad moderation and reporting tools"
                               ].map(item => (
                                   <li key={item} className="flex items-start gap-3 text-sm text-gray-200">
                                       <span className="text-[#f4b827]">✓</span>
