@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbyza | Digital Solutions Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-glow: rgba(99, 102, 241, 0.4);
+            --bg-dark: #070b14;
+            --bg-card: rgba(15, 23, 42, 0.8);
+            --accent: #f43f5e;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.1) 0px, transparent 40%),
+                radial-gradient(at 100% 0%, rgba(244, 63, 94, 0.05) 0px, transparent 40%),
+                radial-gradient(at 50% 50%, rgba(99, 102, 241, 0.05) 0px, transparent 60%);
+            min-height: 100vh;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hero */
+        header {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 5rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        .lead {
+            font-size: 1.4rem;
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Portfolio Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 32px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            page-break-inside: avoid;
+        }
+
+        .card:hover {
+            transform: translateY(-12px) scale(1.02);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 20px rgba(99, 102, 241, 0.1);
+        }
+
+        .card-img-wrapper {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: top center;
+            transition: transform 0.8s ease;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 40px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #fff;
+            letter-spacing: -0.01em;
+        }
+
+        .card-desc {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, var(--primary), #4f46e5);
+            color: white;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s;
+            align-self: flex-start;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px var(--primary-glow);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 150px;
+            text-align: center;
+            padding: 60px;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-dim);
+            background: rgba(0,0,0,0.2);
+        }
+
+        @media print {
+            body { background: white; color: black; }
+            h1 { -webkit-text-fill-color: black; font-size: 3.5rem; }
+            .grid { grid-template-columns: 1fr; }
+            .card { background: white; border: 1px solid #ddd; border-radius: 15px; }
+            .card-title { color: black; }
+            .btn { background: #000; color: #fff; }
+        }
+
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: 1fr; }
+            h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="badge">Orbyza | Digital Portfolio</div>
+            <h1>Orbyza</h1>
+            <p class="lead">A comprehensive showcase of 11 professional digital products engineered for excellence across multiple industries.</p>
+        </header>
+
+        <div class="grid">
+            <!-- 1. NeoFatbury -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <div class="card-img" style="background-image: url('neofatbury_homepage_1776322620097.png');"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Healthcare & Wellness</div>
+                    <h3 class="card-title">NeoFatbury Clinic</h3>
+                    <p class="card-desc">Advanced landing page for a premier Skin & Hair clinic. Designed for patient trust and high conversion rates.</p>
+                    <a href="https://frontend-neofatbury.vercel.app/" class="btn" target="_blank">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 2. MintWalks -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <div class="card-img" style="background-image: url('mintwalks_homepage_1776322769778.png');"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Finance & Growth</div>
+                    <h3 class="card-title">MintWalks Finance</h3>
+                    <p class="card-desc">Strategic wealth management platform. Focused on institutional reliability and seamless user investment flows.</p>
+                    <a href="https://mintwalks.com/" class="btn" target="_blank">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 3. PureRoots -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <div class="card-img" style="background-image: url('pureroots_homepage_1776322876044.png');"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">E-Commerce</div>
+                    <h3 class="card-title">PureRoots Organic</h3>
+                    <p class="card-desc">Direct-to-consumer organic food marketplace. Engineered for speed, mobile-first shopping, and clean aesthetics.</p>
+                    <a href="https://farm-to-fork-bliss.vercel.app/" class="btn" target="_blank">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 4. Side Gate -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <div class="card-img" style="background-image: url('sidegatepreston_homepage_1776323360374.png');"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Building Services</div>
+                    <h3 class="card-title">Side Gate Supply</h3>
+                    <p class="card-desc">Bespoke manufacturing portal for property security. Highlighting master craftsmanship and localized service excellence.</p>
+                    <a href="https://side-gate-preston.vercel.app/" class="btn" target="_blank">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 5. Avtar Mahajan -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <div class="card-img" style="background-image: url('avtarmahajan_homepage_1776323539245.png');"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Personal Branding</div>
+                    <h3 class="card-title">Mindset Coaching</h3>
+                    <p class="card-desc">Digital presence for mindset expert Avtar Mahajan. Built to establish authority and streamline booking for elite coaching.</p>
+                    <a href="https://avtar-mahajan-redesign.vercel.app/" class="btn" target="_blank">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 6. PropertyLords -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <div class="card-img" style="background-image: url('propertylords_homepage_1776323776795.png');"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Real Estate Tech</div>
+                    <h3 class="card-title">PropertyLords</h3>
+                    <p class="card-desc">A high-end property portal showcasing luxury residences in Odisha. Optimized for visual impact and property discovery.</p>
+                    <a href="https://propertylordsbbse.vercel.app/" class="btn" target="_blank">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 7. Chariotads -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <div class="card-img" style="background-image: url('chariotads_homepage_1776323998266.png');"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Advertising Network</div>
+                    <h3 class="card-title">Chariotads Network</h3>
+                    <p class="card-desc">Performance advertising infrastructure for global scale. Designed for publishers and advertisers needing reach and precision.</p>
+                    <a href="https://chariotads.vercel.app/" class="btn" target="_blank">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 8. Ivy Bridge Education -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <div class="card-img" style="background-image: url('ivybridge_homepage_ver2_1776324113064.png');"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">EdTech & Tutoring</div>
+                    <h3 class="card-title">Ivy Bridge Tutoring</h3>
+                    <p class="card-desc">Premier online tutelage platform for Cambridge and IB curriculums. Focused on elite academic excellence and student success.</p>
+                    <a href="https://syllabus-shine-online-main.vercel.app/" class="btn" target="_blank">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 9. Tanglos World -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <div class="card-img" style="background-image: url('tanglosworld_homepage_fix_1776324298242.png');"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">IT Infrastructure</div>
+                    <h3 class="card-title">Tanglos World IT</h3>
+                    <p class="card-desc">Specialized provider of industrial IT hardware and rare accessories. Built for corporate procurement and technical spec discovery.</p>
+                    <a href="https://startup-com.vercel.app/" class="btn" target="_blank">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 10. Ivy Bridge Study -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <div class="card-img" style="background-image: url('ivybridgestudy_homepage_final_1776324661741.png');"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Bespoke Mastery</div>
+                    <h3 class="card-title">Ivy Bridge 1-on-1</h3>
+                    <p class="card-desc">Exclusive mastery platform for international students. Specialized in SAT/GED and personalized curriculum delivery.</p>
+                    <a href="https://ivybridgestudy.com/" class="btn" target="_blank">View Project &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 11. Kumar Printer -->
+            <div class="card">
+                <div class="card-img-wrapper">
+                    <div class="card-img" style="background-image: url('kumarprinter_homepage_final_1776324597329.png');"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-tag">Industrial Printing</div>
+                    <h3 class="card-title">Kumar Printer</h3>
+                    <p class="card-desc">High-precision printing and manufacturing services portal. Showcasing decade-long expertise in graphic design and packaging.</p>
+                    <a href="https://www.kumarprinter.com/" class="btn" target="_blank">View Project &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Developed by Orbyza Team. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

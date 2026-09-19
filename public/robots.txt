@@ -1,0 +1,41 @@
+# robots.txt
+User-agent: *
+Allow: /
+Allow: /call-girls/
+Allow: /massage/
+Allow: /blog/
+Allow: /service-areas/
+Allow: /assets/
+Allow: /images/
+Allow: /models/
+
+# Block private / admin pages
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login
+Disallow: /register
+Disallow: /post-ad
+Disallow: /create-profile
+Disallow: /api/
+Disallow: /search?
+Disallow: /profile/
+Disallow: /*?*
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://in.kokasite.com/sitemap.xml
+Sitemap: https://in.kokasite.com/sitemap_main.xml
+Sitemap: https://in.kokasite.com/sitemap_call_girls.xml
+Sitemap: https://in.kokasite.com/sitemap_massage.xml
+Sitemap: https://in.kokasite.com/sitemap_blogs.xml

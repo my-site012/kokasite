@@ -1,0 +1,40 @@
+name: Deploy to Hostinger cPanel
+
+on:
+  push:
+    branches:
+      - main # This will trigger the deployment every time you push to the 'main' branch
+
+jobs:
+  web-deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20' # The node version used to build our app
+
+      - name: Install Dependencies
+        run: npm ci # Faster and more reliable than npm install for CI/CD
+
+      - name: Build React App
+        run: npm run build
+        env:
+          CI: false # Prevents the build from failing on minor warnings
+
+      - name: Sync files to Hostinger FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/ # We only want to upload the compiled 'dist' folder
+          server-dir: ./ # It will upload into whatever directory you locked the FTP account to
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
