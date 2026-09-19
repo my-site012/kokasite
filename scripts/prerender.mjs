@@ -594,20 +594,21 @@ async function runPrerender() {
 
               mainBodyHtml = `
                 <p style="font-size: 17px; line-height: 1.8; color: #e4e4e7; margin-bottom: 20px;">
-                  Welcome to the official <strong>${escapeHtml(cityName)}</strong> directory for ${escapeHtml(cfg.typeDesc)}. Whether you are a resident professional or visiting ${escapeHtml(cityName)}, ${escapeHtml(regionName)}, Koka Site connects you with local independent advertisers and classified listings.
+                  Welcome to the official <strong>${escapeHtml(cityName)}</strong> directory for <strong>${escapeHtml(cfg.termPlural.toLowerCase())}</strong> and <strong>${escapeHtml(cfg.typeDesc)}</strong>. Whether you are a resident professional or visiting <strong>${escapeHtml(cityName)}, ${escapeHtml(regionName)}</strong>, Koka Site connects you with verified <strong>independent companions in ${escapeHtml(cityName)}</strong> and local classified listings.
                 </p>
 
                 <div style="background-color: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 22px; margin-bottom: 28px;">
-                  <h2 style="font-size: 20px; color: #f4b827; margin-top: 0;">Directory Guidelines in ${escapeHtml(cityName)}</h2>
-                  <p>In ${escapeHtml(cityName)}, independent advertisers provide classified listings directly. We advocate for transparency, mutual respect, and privacy.</p>
+                  <h2 style="font-size: 20px; color: #f4b827; margin-top: 0;">Directory Guidelines for <strong>${escapeHtml(cityName)} ${escapeHtml(cfg.termPlural)}</strong></h2>
+                  <p>In <strong>${escapeHtml(cityName)}</strong>, independent advertisers provide verified classified listings for <strong>${escapeHtml(cfg.termPlural.toLowerCase())} in ${escapeHtml(cityName)}</strong>. We advocate for transparency, mutual respect, and privacy.</p>
                   <ul style="line-height: 1.8; margin-bottom: 0; padding-left: 20px;">
-                    <li><strong>Direct Communication:</strong> Communicate directly with listed providers via their published contact details.</li>
-                    <li><strong>Safety First:</strong> Avoid paying upfront deposits or booking fees to unknown parties. Arrange meetings in safe, reputable locations.</li>
+                    <li><strong>Direct Communication:</strong> Connect directly with <strong>verified ${escapeHtml(cityName)} companions</strong> via their published contact details.</li>
+                    <li><strong>Hotel Outcalls &amp; Incalls:</strong> Explore doorstep outcall visits across hotels and private residences in <strong>${escapeHtml(cityName)}</strong>.</li>
+                    <li><strong>Safety First:</strong> Avoid paying upfront deposits or booking fees to unknown parties. Arrange meetings in safe, reputable locations with direct in-person payment.</li>
                     <li><strong>Adult Classifieds:</strong> All advertisers and users must be 18 years of age or older.</li>
                   </ul>
                 </div>
 
-                <h2 style="font-size: 20px; color: #fafafa; margin-bottom: 12px;">Market Pricing Overview in ${escapeHtml(cityName)}</h2>
+                <h2 style="font-size: 20px; color: #fafafa; margin-bottom: 12px;">Market Pricing Overview for <strong>${escapeHtml(cityName)} ${escapeHtml(cfg.termPlural)}</strong></h2>
                 <div style="overflow-x: auto; margin-bottom: 28px;">
                   <table style="width: 100%; border-collapse: collapse; font-size: 14px; text-align: left; background: #18181b; border-radius: 8px; overflow: hidden;">
                     <thead>
@@ -620,7 +621,7 @@ async function runPrerender() {
                     <tbody>
                       <tr style="border-bottom: 1px solid #27272a;">
                         <td style="padding: 12px 16px;">1 Hour Session</td>
-                        <td style="padding: 12px 16px;">Standard companionship / session</td>
+                        <td style="padding: 12px 16px;">Standard <strong>${escapeHtml(cfg.termSingular.toLowerCase())}</strong> session</td>
                         <td style="padding: 12px 16px; color: #f4b827; font-weight: 600;">₹2,000 - ₹3,500</td>
                       </tr>
                       <tr style="border-bottom: 1px solid #27272a;">
@@ -630,7 +631,7 @@ async function runPrerender() {
                       </tr>
                       <tr>
                         <td style="padding: 12px 16px;">Full Night (Overnight)</td>
-                        <td style="padding: 12px 16px;">Extended companionship</td>
+                        <td style="padding: 12px 16px;">Complete overnight <strong>${escapeHtml(cfg.termSingular.toLowerCase())}</strong> booking</td>
                         <td style="padding: 12px 16px; color: #f4b827; font-weight: 600;">₹7,000 - ₹12,000</td>
                       </tr>
                     </tbody>
@@ -643,15 +644,15 @@ async function runPrerender() {
             faqs = [
               {
                 q: `How do I find independent ${cfg.termPlural.toLowerCase()} in ${cityName}?`,
-                a: `Browse through the classified ad profiles listed for ${cityName} on Koka Site and contact the advertiser directly via the phone number or messaging details on their profile.`
+                a: `Browse through verified classified ad profiles for ${cfg.termPlural.toLowerCase()} in ${cityName} on Koka Site and contact the advertiser directly via the phone number or messaging details on their profile.`
               },
               {
                 q: `Is advance payment required for bookings in ${cityName}?`,
-                a: `We advise users never to transfer online advance payments, wire transfers, or booking fees. For safety and fraud prevention, arrange meetings in person at verified venues.`
+                a: `We advise users never to transfer online advance payments, wire transfers, or booking fees. For safety and fraud prevention, arrange meetings in person at verified venues in ${cityName}.`
               },
               {
                 q: `What areas and localities in ${cityName} are covered?`,
-                a: `Independent advertisers in ${cityName} typically indicate their service radii, covering major hotel districts, central neighborhoods, and surrounding suburbs.`
+                a: `Independent companions in ${cityName} typically indicate their service radii, covering major hotel districts, central neighborhoods, and surrounding suburbs across ${cityName}.`
               }
             ];
 

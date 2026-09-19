@@ -65,47 +65,47 @@ export function generateUltraLongProfileDesc(name: string, city: string, age: nu
 }
 
 const seoTemplates = [
-    (city: string, state: string) => `Finding trusted companions in ${city} should be straightforward and discreet. Our directory connects you directly with verified independent companions and escort services across ${city} without agency delays or hidden costs. Profiles feature genuine unedited photos and verified contact numbers for easy booking.`,
+    (city: string, state: string) => `Finding trusted **companions in ${city}** should be straightforward and discreet. Our directory connects you directly with **verified independent companions** and **escort services across ${city}** without agency delays or hidden costs. Profiles feature genuine photos and direct contact details for seamless booking.`,
     
-    (city: string, state: string) => `Whether you prefer youthful college companions, charming models, or sophisticated mature escorts in ${city}, our curated listings offer diverse options to match your personal preferences. Each profile is vetted for safety, hygiene, and genuine hospitality.`,
+    (city: string, state: string) => `Whether you prefer youthful **college companions in ${city}**, charming models, or sophisticated **mature escorts in ${city}**, our curated classifieds offer diverse choices matching your personal preferences. Each profile is moderated for transparency and direct communication.`,
 
-    (city: string) => `Client privacy is treated with the highest priority. Independent call girls in ${city} operate with complete discretion, ensuring seamless in-call sessions at private apartments or confidential hotel outcalls at prime venues across ${city}.`,
+    (city: string) => `Client privacy is treated with the highest priority. **Independent call girls in ${city}** operate with complete discretion, offering comfortable in-call arrangements at private residences or confidential **hotel outcalls in ${city}**.`,
 
-    (city: string) => `Every companion listed here takes pride in offering an attentive, engaging, and memorable experience. You can expect relaxed conversation, genuine warmth, and a stress-free environment from confirmed escort service providers in ${city}.`,
+    (city: string) => `Every companion listed here takes pride in offering attentive, polite, and engaging company. You can expect relaxed conversation, genuine warmth, and a stress-free experience from verified **escort service providers in ${city}**.`,
 
-    (city: string) => `Arranging a meeting is simple and transparent. Contact your preferred companion directly via WhatsApp or phone call to verify availability, discuss rates, and agree on hotel outcall or private incall timings anywhere in ${city}.`,
+    (city: string) => `Arranging a meeting is simple and transparent. Contact your preferred provider directly via WhatsApp or phone call to confirm availability, discuss rates, and coordinate **hotel outcall or private incall in ${city}**.`,
 
-    (city: string) => `From corporate executives visiting on business to discerning locals seeking an evening date, verified companions in ${city} provide polished companionship for dinners, private events, or quiet relaxation.`,
+    (city: string) => `From corporate executives visiting on business to discerning locals seeking an evening date, verified **companions in ${city}** provide polished companionship for dinners, private events, or quiet relaxation.`,
 
-    (city: string) => `Browse our latest photo galleries, compare service options, and get in touch directly. Settle payment comfortably in cash upon arrival, with zero advance transfer or online deposit required for verified ${city} escorts.`,
+    (city: string) => `Browse our latest verified photo profiles, compare service details, and connect directly. Settle payment comfortably in person upon arrival, with zero advance transfer or online deposit required for **verified ${city} escorts**.`,
 
-    (city: string) => `Independent companions manage their own schedules, ensuring focused and unhurried appointments. Enjoy personalized attention from dedicated independent call girls across ${city}.`,
+    (city: string) => `Independent companions manage their own schedules, ensuring focused and unhurried appointments. Enjoy dedicated, personalized attention from verified **independent call girls across ${city}**.`,
 
-    (city: string) => `Whether you desire a charming dinner companion for an evening out or a relaxing private date, premium companions in ${city} deliver authentic charm, elegance, and complete confidentiality.`,
+    (city: string) => `Whether you desire a charming dinner date or a relaxing private evening, **premium companions in ${city}** deliver authentic charm, elegance, and complete confidentiality.`,
 
-    (city: string) => `We encourage polite and respectful communication with all advertisers. Mutual respect and clear expectations ensure an unforgettable, world-class escort experience throughout ${city}.`
+    (city: string) => `We encourage polite and respectful communication with all independent advertisers. Mutual respect and clear expectations ensure an unforgettable, enjoyable **escort experience throughout ${city}**.`
 ];
 
 const citySpecificParagraphs: Record<string, string[]> = {
     mumbai: [
-        "Mumbai's vibrant social scene offers exceptional nightlife and entertainment. Whether you are staying in Bandra, BKC, or South Mumbai, verified call girls in Mumbai provide discreet outcall services to leading luxury hotels.",
-        "Companions here cater to corporate executives and international travelers, delivering sophisticated conversation and genuine hospitality for relaxed evenings."
+        "Mumbai's vibrant social scene offers exceptional nightlife and upscale venues. Whether you are staying in Bandra, BKC, or South Mumbai, verified **call girls in Mumbai** provide discreet **hotel outcall escort services** across luxury locations.",
+        "Companions here cater to business executives and visitors, delivering sophisticated conversation and authentic hospitality for memorable evenings."
     ],
     delhi: [
-        "Delhi NCR features an extensive directory of independent companions covering Central Delhi, South Extension, Gurgaon DLF corridors, and Noida. Verified call girls in Delhi offer prompt in-call and hotel outcall bookings.",
-        "High standards of confidentiality ensure peace of mind for business travelers and private visitors seeking discreet escort services in Delhi."
+        "Delhi NCR features an extensive classifieds directory of independent companions covering Central Delhi, South Extension, Gurgaon DLF corridors, and Noida. Verified **call girls in Delhi** and **Gurgaon escorts** offer prompt incall and outcall meetings.",
+        "High standards of confidentiality ensure peace of mind for business travelers and private visitors seeking professional **escort services in Delhi NCR**."
     ],
     bengaluru: [
-        "In India's Silicon Valley, professionals appreciate relaxing companion services after demanding workweeks. Independent call girls in Bengaluru provide intelligent, charming, and unhurried companionship across Koramangala, Indiranagar, and Whitefield.",
-        "Enjoy authentic dates with verified escorts in Bengaluru with zero advance deposits and complete privacy."
+        "In India's Silicon Valley, professionals appreciate relaxing companionship after demanding workweeks. Independent **call girls in Bengaluru** provide intelligent, charming, and unhurried company across Koramangala, Indiranagar, and Whitefield.",
+        "Connect directly with verified **escorts in Bengaluru** with transparent terms and complete privacy."
     ],
     jaipur: [
-        "Jaipur combines historic heritage with luxury hospitality. Verified companions in Jaipur are available for visits to boutique resorts and five-star hotels across Malviya Nagar, C-Scheme, and Tonk Road.",
-        "Experience warm, respectful hospitality tailored to solo travelers and discerning vacationers in Jaipur."
+        "Jaipur combines historic heritage with luxury hospitality. Verified **companions in Jaipur** are available for visits to boutique resorts and five-star hotels across Malviya Nagar, C-Scheme, and Tonk Road.",
+        "Experience warm, respectful hospitality tailored to solo travelers seeking premium **call girls in Jaipur**."
     ],
     goa: [
-        "Goa is India's premier holiday destination. Discerning travelers can connect with verified independent escorts in Goa for beachside villa companionship and hotel visits across Calangute, Baga, and Panaji.",
-        "Arrangements are handled with complete discretion, offering relaxed company during your coastal getaway."
+        "Goa is India's premier coastal holiday destination. Discerning travelers can connect with verified **independent escorts in Goa** for beachside villa companionship and hotel visits across Calangute, Baga, and Panaji.",
+        "Arrangements with **Goa call girls** are handled with complete discretion, offering relaxed company during your coastal vacation."
     ]
 };
 
@@ -113,37 +113,37 @@ export function generateUltraLongCitySeo(cityName: string, stateName: string, is
     const seed = hashCode(cityName + stateName);
     const citySlug = cityName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
     
-    let result = `Luxurious & Verified Companion Services in ${cityName}\n\n`;
-    result += `Welcome to our premier directory for call girls and escort services in ${cityName}. Whether you are traveling for business, exploring ${cityName} as a visitor, or seeking private relaxation, our verified independent companions offer personalized experiences tailored to your schedule. Sessions range from relaxed dinner dates to private hotel outcalls with complete discretion.\n\n`;
+    let result = `**Verified Companion & Escort Services in ${cityName}**\n\n`;
+    result += `Welcome to our comprehensive directory for **call girls and escort services in ${cityName}**. Whether you are traveling for business, exploring ${cityName} as a visitor, or seeking private relaxation, our verified independent companions offer personalized experiences tailored to your schedule. Sessions range from relaxed dinner dates to private **hotel outcalls in ${cityName}** with complete discretion.\n\n`;
 
     const categoryDetailsEnglish = [
-        `College Companions in ${cityName} (18+ Only)\nCollege companions in ${cityName} are popular among clients who appreciate youthful energy, open conversations, and a contemporary outlook. All profiles are strictly verified 18+ consenting adults who are articulate, stylish, and socially confident. They fit comfortably into casual settings like lounge cafés or private hotel suites, offering friendly, unhurried companionship.`,
+        `**College Companions in ${cityName} (18+ Only)**\n**College companions in ${cityName}** are popular among clients who appreciate youthful energy, open conversations, and a contemporary outlook. All profiles are strictly verified 18+ consenting adults who are articulate, stylish, and socially confident. They fit comfortably into casual settings like lounge cafés or private hotel suites, offering friendly, unhurried companionship.`,
         
-        `Housewife & Mature Companions in ${cityName}\nMature companions in ${cityName} are admired for their warmth, emotional balance, and calm demeanor. They provide a comfortable, welcoming environment for clients who value sincere connection and stress-free relaxation. Discretion and mutual respect are maintained throughout every meeting.`,
+        `**Housewife & Mature Companions in ${cityName}**\n**Mature companions in ${cityName}** are admired for their warmth, emotional balance, and calm demeanor. They provide a comfortable, welcoming environment for clients who value sincere connection and stress-free relaxation. Discretion and mutual respect are maintained throughout every meeting.`,
         
-        `Model & VIP Escorts in ${cityName}\nVIP model escorts in ${cityName} offer high-level glamour, elegance, and sophisticated social presence. Ideal for executive travelers, upscale events, and luxury five-star hotel stays, these companions possess refined etiquette and impeccable personal presentation.`,
+        `**Model & VIP Escorts in ${cityName}**\n**VIP model escorts in ${cityName}** offer high-level glamour, elegance, and sophisticated social presence. Ideal for executive travelers, upscale events, and luxury five-star hotel stays, these companions possess refined etiquette and impeccable personal presentation.`,
         
-        `International & Global Companions in ${cityName}\nInternational companions in ${cityName} offer cosmopolitan charm and global perspectives. Well-traveled and fluent in English, they provide engaging conversation and refined company for private suite appointments and holiday getaways.`,
+        `**International & Global Companions in ${cityName}**\n**International companions in ${cityName}** offer cosmopolitan charm and global perspectives. Well-traveled and fluent in English, they provide engaging conversation and refined company for private suite appointments and holiday getaways.`,
         
-        `Independent Escorts in ${cityName}\nIndependent call girls in ${cityName} manage their own bookings directly, ensuring transparent communication and flexible scheduling. By avoiding agency intermediaries, clients enjoy direct coordination, clear terms, and attentive one-on-one sessions.`
+        `**Independent Escorts in ${cityName}**\n**Independent call girls in ${cityName}** manage their own bookings directly, ensuring transparent communication and flexible scheduling. By avoiding agency intermediaries, clients enjoy direct coordination, clear terms, and attentive one-on-one sessions.`
     ];
 
     result += categoryDetailsEnglish.join("\n\n") + "\n\n";
 
     // Clean English Booking Guidelines (No Hindi, no raw markdown headers, strictly 2-3 relevant keywords)
-    const bookingGuidelines = `Booking Guidelines & Client Safety in ${cityName}\n\n` +
-    `Our directory emphasizes complete client security, genuine profiles, and safe practices across all areas in ${cityName}.\n\n` +
+    const bookingGuidelines = `**Booking Guidelines & Client Safety in ${cityName}**\n\n` +
+    `Our directory emphasizes complete client security, genuine profiles, and safe practices across all areas in **${cityName}**.\n\n` +
     `Key Highlights:\n` +
-    `- Zero Advance Deposit: Never transfer online payments beforehand. Settle all fees directly in cash upon meeting your companion.\n` +
-    `- Prompt Doorstep Delivery: Outcall companions typically arrive within 30 to 45 minutes at major hotels and private addresses in ${cityName}.\n` +
-    `- 100% Verified Profiles: All listings feature verified real photos and direct WhatsApp contact details.\n` +
-    `- Strict Confidentiality: Your personal identity and booking details remain private and confidential at all times.\n\n` +
-    `How to Book:\n` +
-    `1. Browse through verified profiles available in ${cityName}.\n` +
-    `2. Choose 2 to 3 companions that match your schedule and preferences.\n` +
-    `3. Connect directly via WhatsApp or telephone call to confirm availability.\n` +
-    `4. Provide your hotel address or private location.\n` +
-    `5. Meet in person and complete cash payment upon arrival.`;
+    `- **Zero Advance Deposit:** Never transfer online payments beforehand. Settle all fees directly upon meeting your companion in person.\n` +
+    `- **Doorstep Outcalls:** Outcall companions can coordinate meetings at major hotels and private addresses across **${cityName}**.\n` +
+    `- **Verified Profiles:** Listings feature independent photos and direct contact details.\n` +
+    `- **Strict Confidentiality:** Your personal identity and privacy remain confidential at all times.\n\n` +
+    `How to Connect:\n` +
+    `1. Browse through verified profiles available in **${cityName}**.\n` +
+    `2. Choose companions that match your schedule and preferences.\n` +
+    `3. Connect directly via WhatsApp or phone call to confirm availability.\n` +
+    `4. Coordinate your hotel or private venue details.\n` +
+    `5. Meet in person and complete arrangements directly.`;
 
     result += bookingGuidelines + "\n\n";
 
@@ -169,8 +169,8 @@ export function generateUltraLongCitySeo(cityName: string, stateName: string, is
     }).join("\n\n");
 
     const closings = [
-        `\n\nEnjoy quality companionship during your time in ${cityName}. Connect directly with verified call girls in ${cityName} on WhatsApp today and enjoy straightforward cash payment upon meeting.`,
-        `\n\nWhether you live in ${cityName} or are visiting for a few days, discover dependable escort services in ${cityName} backed by real photos and complete privacy.`
+        `\n\nEnjoy quality companionship during your stay in **${cityName}**. Connect directly with verified **call girls in ${cityName}** on WhatsApp today and arrange meetings with complete discretion.`,
+        `\n\nWhether you reside in **${cityName}** or are visiting on a short trip, discover dependable **escort services in ${cityName}** backed by transparent listings and complete privacy.`
     ];
     result += closings[seed % closings.length];
 
