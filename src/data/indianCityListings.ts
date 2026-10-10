@@ -93,7 +93,16 @@ const pricingByCountry: Record<string, { rate: number; currency: string }> = {
     GB: { rate: 150, currency: "£" }
 };
 
-const genericAreas = ["Central Area", "Downtown", "Luxury District", "IT Park", "Tourist Hub", "VIP Sector", "Heritage Zone"];
+const genericAreas = ["Central Area", "Downtown", "Luxury District", "IT Park", "Tourist Hub", "VIP Sector", "Heritage Zone", "Old City", "Civil Lines", "Cantonment", "Railway Station Area", "Airport Zone"];
+
+// Pool of popular Indian cities for cross-city availability mixing
+const popularIndiaCities = [
+    "Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Chennai", "Kolkata", "Pune", "Ahmedabad",
+    "Jaipur", "Lucknow", "Chandigarh", "Goa", "Indore", "Bhopal", "Nagpur", "Kochi",
+    "Surat", "Vadodara", "Agra", "Varanasi", "Patna", "Dehradun", "Guwahati", "Raipur",
+    "Bhubaneswar", "Coimbatore", "Visakhapatnam", "Mangalore", "Mysuru", "Udaipur",
+    "Jodhpur", "Amritsar", "Shimla", "Manali", "Noida", "Gurgaon", "Faridabad"
+];
 
 const indianModelPhotos = [
   "/models/202512-09-182608_KZ-0.webp",
@@ -211,19 +220,29 @@ function generateListingsForCity(citySlug: string): Listing[] {
         const area = cityAreas[seed % cityAreas.length];
         const age = 21 + (seed % 8);
 
+        // Cross-city availability: pick 2-3 nearby cities from pool (excluding current city)
+        const availableCitiesPool = popularIndiaCities.filter(
+            c => c.toLowerCase() !== capitalizedCity.toLowerCase()
+        );
+        const crossCity1 = availableCitiesPool[(seed + 3) % availableCitiesPool.length];
+        const crossCity2 = availableCitiesPool[(seed + 7) % availableCitiesPool.length];
+        const crossCityStr = crossCity1 !== crossCity2
+            ? `${crossCity1} & ${crossCity2}`
+            : crossCity1;
+
         const fullDescription = generateUltraLongProfileDesc(
             fullName, 
             capitalizedCity, 
             age, 
-            `I am a premium companion in ${capitalizedCity} offering high-class escort and relaxation services customized to your needs.`
+            `I am a premium companion based in ${capitalizedCity}, also available for outcalls in ${crossCityStr}. I offer high-class escort and relaxation services customized to your needs.`
         );
 
         const titles = [
             `${capitalizedCity.toUpperCase()} BEST 💯 VIP SAFE AND SECURE GENUINE SERVICE CALL ME`,
             `PREMIUM ${capitalizedCity.toUpperCase()} INDEPENDENT COMPANION 💋 100% GENUINE PHOTOS`,
             `HIGH PROFILE ${capitalizedCity.toUpperCase()} SERVICES – DOORSTEP SERVICE AVAILABLE`,
-            `GENUINE ${capitalizedCity.toUpperCase()} MODEL 🔥 24/7 AVAILABLE`,
-            `ELITE COMPANION IN ${capitalizedCity.toUpperCase()} 🌟 100% SATISFACTION GUARANTEED`
+            `GENUINE ${capitalizedCity.toUpperCase()} MODEL 🔥 24/7 AVAILABLE – ALSO IN ${crossCity1.toUpperCase()}`,
+            `ELITE COMPANION IN ${capitalizedCity.toUpperCase()} 🌟 OUTCALL TO ${crossCity1.toUpperCase()} AVAILABLE`
         ];
         const catchyTitle = titles[seed % titles.length];
 

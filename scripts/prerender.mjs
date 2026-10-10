@@ -265,11 +265,6 @@ async function runPrerender() {
       h1: 'Independent Adult Companions, Classifieds & Body Massage Directory',
       content: `
         <p style="font-size: 18px; color: #e4e4e7; margin-bottom: 24px;">Welcome to <strong>Koka Site</strong>, India's classifieds platform connecting adults with independent companions, escorts, and relaxing body massage specialists.</p>
-        
-        <div style="background-color: #18181b; border: 1px solid #27272a; border-radius: 10px; padding: 24px; margin-bottom: 32px;">
-          <h2 style="font-size: 20px; color: #f4b827; margin-top: 0;">Community Moderated &amp; Transparent Directory</h2>
-          <p style="margin-bottom: 0;">We prioritize client and advertiser safety. Profiles listed on our directory provide direct advertiser communication channels. For your safety, we strongly advise meeting in verified settings and avoiding any online advance deposits or booking fees.</p>
-        </div>
 
         <h2 style="font-size: 22px; color: #fafafa; margin-bottom: 16px;">Top Service Cities in India</h2>
         <ul style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; list-style: none; padding: 0; margin-bottom: 36px;">
@@ -362,6 +357,41 @@ async function runPrerender() {
       desc: 'Browse our complete directory of verified cities, states, and categories across India.',
       h1: 'Complete Location Directory & Sitemap',
       content: sitemapDirectoryContent
+    },
+    {
+      path: 'admin',
+      title: 'Admin Portal | Koka Site',
+      desc: 'Administrator control panel for Koka Site management.',
+      h1: 'Admin Portal',
+      content: '<p>Loading Administrator Dashboard...</p>'
+    },
+    {
+      path: 'login',
+      title: 'Member Login | Koka Site',
+      desc: 'Sign in to manage your advertiser profile on Koka Site.',
+      h1: 'Member Login',
+      content: '<p>Loading Member Login...</p>'
+    },
+    {
+      path: 'register',
+      title: 'Register Account | Koka Site',
+      desc: 'Create an advertiser account on Koka Site.',
+      h1: 'Create Advertiser Account',
+      content: '<p>Loading Registration...</p>'
+    },
+    {
+      path: 'dashboard',
+      title: 'Advertiser Dashboard | Koka Site',
+      desc: 'Manage your active listings and profile on Koka Site.',
+      h1: 'Advertiser Dashboard',
+      content: '<p>Loading Dashboard...</p>'
+    },
+    {
+      path: 'create-profile',
+      title: 'Create Profile | Koka Site',
+      desc: 'Create and submit your companion profile on Koka Site.',
+      h1: 'Create Profile',
+      content: '<p>Loading Profile Creation...</p>'
     }
   ];
 
@@ -528,15 +558,6 @@ async function runPrerender() {
                 <p>${stateIntro}</p>
               </div>
 
-              <div style="background-color: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 20px; margin-bottom: 36px;">
-                <h2 style="font-size: 20px; color: #f4b827; margin-top: 0;">Safety &amp; Booking Guidelines in ${escapeHtml(regionName)}</h2>
-                <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
-                  <li><strong>Zero Advance Deposit:</strong> Always make payments directly hand-to-hand upon meeting the companion.</li>
-                  <li><strong>Discreet &amp; Private:</strong> Meetings can be arranged at top 3-star, 4-star, or 5-star hotels or client's private residences.</li>
-                  <li><strong>Verified Contacts:</strong> Profiles are updated regularly with direct WhatsApp and telephone numbers.</li>
-                </ul>
-              </div>
-
               <h2 style="font-size: 22px; color: #fafafa; margin-bottom: 16px;">Top Cities &amp; Locations in ${escapeHtml(regionName)}</h2>
               <ul style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; list-style: none; padding: 0; margin-bottom: 36px;">
                 ${citiesListHtml}
@@ -596,17 +617,6 @@ async function runPrerender() {
                 <p style="font-size: 17px; line-height: 1.8; color: #e4e4e7; margin-bottom: 20px;">
                   Welcome to the official <strong>${escapeHtml(cityName)}</strong> directory for <strong>${escapeHtml(cfg.termPlural.toLowerCase())}</strong> and <strong>${escapeHtml(cfg.typeDesc)}</strong>. Whether you are a resident professional or visiting <strong>${escapeHtml(cityName)}, ${escapeHtml(regionName)}</strong>, Koka Site connects you with verified <strong>independent companions in ${escapeHtml(cityName)}</strong> and local classified listings.
                 </p>
-
-                <div style="background-color: #18181b; border: 1px solid #27272a; border-radius: 8px; padding: 22px; margin-bottom: 28px;">
-                  <h2 style="font-size: 20px; color: #f4b827; margin-top: 0;">Directory Guidelines for <strong>${escapeHtml(cityName)} ${escapeHtml(cfg.termPlural)}</strong></h2>
-                  <p>In <strong>${escapeHtml(cityName)}</strong>, independent advertisers provide verified classified listings for <strong>${escapeHtml(cfg.termPlural.toLowerCase())} in ${escapeHtml(cityName)}</strong>. We advocate for transparency, mutual respect, and privacy.</p>
-                  <ul style="line-height: 1.8; margin-bottom: 0; padding-left: 20px;">
-                    <li><strong>Direct Communication:</strong> Connect directly with <strong>verified ${escapeHtml(cityName)} companions</strong> via their published contact details.</li>
-                    <li><strong>Hotel Outcalls &amp; Incalls:</strong> Explore doorstep outcall visits across hotels and private residences in <strong>${escapeHtml(cityName)}</strong>.</li>
-                    <li><strong>Safety First:</strong> Avoid paying upfront deposits or booking fees to unknown parties. Arrange meetings in safe, reputable locations with direct in-person payment.</li>
-                    <li><strong>Adult Classifieds:</strong> All advertisers and users must be 18 years of age or older.</li>
-                  </ul>
-                </div>
 
                 <h2 style="font-size: 20px; color: #fafafa; margin-bottom: 12px;">Market Pricing Overview for <strong>${escapeHtml(cityName)} ${escapeHtml(cfg.termPlural)}</strong></h2>
                 <div style="overflow-x: auto; margin-bottom: 28px;">

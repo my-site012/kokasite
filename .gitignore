@@ -31,3 +31,4 @@ clicks_data.json
 app_settings.json
 
 .vercel
+.env*.local

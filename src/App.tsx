@@ -6,11 +6,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SettingsProvider } from "./context/SettingsContext";
 
-// Primary public pages - eagerly loaded for instant rendering with zero spinner delay
+// Primary home page
 import Index from "./pages/Index";
-import CitySEOPage from "./pages/CitySEOPage";
-import CitySEOPage_Detail from "./pages/CitySEOPage_Detail";
-import ServiceAreas from "./pages/ServiceAreas";
+
+// Lazy-loaded pages for faster initial load and optimal PageSpeed
+const CitySEOPage = lazy(() => import("./pages/CitySEOPage"));
+const CitySEOPage_Detail = lazy(() => import("./pages/CitySEOPage_Detail"));
+const ServiceAreas = lazy(() => import("./pages/ServiceAreas"));
 
 // Secondary page components - code split on demand
 const CategoryPage = lazy(() => import("./pages/CategoryPage"));

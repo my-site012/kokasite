@@ -283,16 +283,32 @@ const CitySEOPage: React.FC<CitySEOPageProps> = ({ categoryType = 'call-girl' })
         "@context": "https://schema.org",
         "@graph": [
             {
+                "@type": "WebSite",
+                "@id": `${SITE_URL}#website`,
+                "url": SITE_URL,
+                "name": "Koka Site",
+                "description": "India's leading adult classifieds directory for independent companions and massage services.",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": `${SITE_URL}search?q={search_term_string}`
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
                 "@type": "WebPage",
                 "@id": `${currentUrl}#webpage`,
                 "url": currentUrl,
                 "name": effectivePageData.title,
                 "description": effectivePageData.metaDesc,
-                "isPartOf": {
-                    "@type": "WebSite",
-                    "@id": `${SITE_URL}#website`,
-                    "name": "Koka Site",
-                    "url": SITE_URL
+                "inLanguage": "en-IN",
+                "dateModified": new Date().toISOString().split('T')[0],
+                "isPartOf": { "@id": `${SITE_URL}#website` },
+                "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "url": `${SITE_URL}logo.png`
                 }
             },
             {
@@ -322,6 +338,75 @@ const CitySEOPage: React.FC<CitySEOPageProps> = ({ categoryType = 'call-girl' })
                         "position": dynamicStateName ? 4 : 3,
                         "name": cityName,
                         "item": currentUrl
+                    }
+                ]
+            },
+            {
+                "@type": "LocalBusiness",
+                "@id": `${currentUrl}#localbusiness`,
+                "name": effectivePageData.title,
+                "description": effectivePageData.metaDesc,
+                "url": currentUrl,
+                "image": `${SITE_URL}logo.png`,
+                "logo": `${SITE_URL}logo.png`,
+                "priceRange": currencySymbol + currencySymbol + currencySymbol,
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": cityName,
+                    "addressRegion": dynamicStateName || cityName,
+                    "addressCountry": "IN"
+                },
+                "areaServed": {
+                    "@type": "City",
+                    "name": cityName
+                },
+                "sameAs": [SITE_URL]
+            },
+            {
+                "@type": "ItemList",
+                "@id": `${currentUrl}#itemlist`,
+                "name": `${categoryType === 'massage' ? 'Massage Services' : 'Companions'} in ${cityName}`,
+                "description": effectivePageData.metaDesc,
+                "url": currentUrl,
+                "numberOfItems": allListings.length,
+                "itemListElement": allListings.slice(0, 10).map((listing, idx) => ({
+                    "@type": "ListItem",
+                    "position": idx + 1,
+                    "name": listing.name,
+                    "url": currentUrl
+                }))
+            },
+            {
+                "@type": "FAQPage",
+                "@id": `${currentUrl}#faq`,
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": categoryType === 'massage'
+                            ? `How to find body massage services in ${cityName}?`
+                            : `How to find call girls in ${cityName}?`,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": categoryType === 'massage'
+                                ? `Browse our verified directory of ${totalCount}+ independent massage therapists and spa centers in ${cityName}. All listings are independently managed advertisers on Koka Site.`
+                                : `Browse our verified directory of ${totalCount}+ independent companion profiles in ${cityName}. Contact advertisers directly — no advance payment required.`
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": `Is Koka Site safe to use in ${cityName}?`,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": `Koka Site is an open classifieds directory for consenting adults. Always meet in safe public locations first. Never pay advance deposits online. All advertisers are independent individuals.`
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": `How many listings are available in ${cityName}?`,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": `There are currently ${totalCount} active listings in ${cityName} on Koka Site across multiple categories and price ranges.`
+                        }
                     }
                 ]
             }

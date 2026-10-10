@@ -61,17 +61,38 @@ const SettingsContext = createContext<{ settings: AppSettings, refreshSettings: 
 });
 
 export const SettingsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [settings, setSettings] = useState<AppSettings>(defaultSettings);
+    const [settings, setSettings] = useState<AppSettings>(() => {
+        if (typeof window !== "undefined") {
+            try {
+                const cached = localStorage.getItem("app_settings_cache");
+                if (cached) {
+                    return { ...defaultSettings, ...JSON.parse(cached) };
+                }
+            } catch (e) {
+                // Ignore parse errors
+            }
+        }
+        return defaultSettings;
+    });
 
     const refreshSettings = async () => {
         try {
-            const res = await fetch("/api/admin-settings");
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 3000); // 3s non-blocking timeout
+
+            const res = await fetch("/api/admin-settings", { signal: controller.signal });
+            clearTimeout(timeoutId);
+
             if (res.ok) {
                 const data = await res.json();
-                setSettings({ ...defaultSettings, ...data });
+                const merged = { ...defaultSettings, ...data };
+                setSettings(merged);
+                if (typeof window !== "undefined") {
+                    localStorage.setItem("app_settings_cache", JSON.stringify(merged));
+                }
             }
         } catch (error) {
-            console.error("Failed to load settings:", error);
+            // Silently fall back to cached/default settings without blocking UI
         }
     };
 
