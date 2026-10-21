@@ -33,8 +33,8 @@ Disallow: /dashboard/
 Disallow: /api/
 
 # Sitemaps
-Sitemap: https://in.kokasite.com/sitemap.xml
-Sitemap: https://in.kokasite.com/sitemap_main.xml
-Sitemap: https://in.kokasite.com/sitemap_call_girls.xml
-Sitemap: https://in.kokasite.com/sitemap_massage.xml
-Sitemap: https://in.kokasite.com/sitemap_blogs.xml
+Sitemap: https://kokasite.com/sitemap.xml
+Sitemap: https://kokasite.com/sitemap_main.xml
+Sitemap: https://kokasite.com/sitemap_call_girls.xml
+Sitemap: https://kokasite.com/sitemap_massage.xml
+Sitemap: https://kokasite.com/sitemap_blogs.xml

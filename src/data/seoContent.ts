@@ -45,7 +45,7 @@ export const infoPages: Record<string, { title: string; content: string; metaDes
       Got a problem? We’ll fix it. Our support team operates 24/7 to handle account verifications, billing disputes, and technical glitches. 
       
       **Advertisers & Models:** 
-      If you're having trouble uploading photos, verifying your ID, or managing your VIP bumps, shoot us an email at support@in.kokasite.com. Include your username.
+      If you're having trouble uploading photos, verifying your ID, or managing your VIP bumps, shoot us an email at support@kokasite.com. Include your username.
       
       **Clients & Users:** 
       Remember to read individual ad descriptions carefully before contacting models. If you spot a fake profile, use the "Report Ad" button on their page. For site-wide issues, drop us a line.
@@ -59,7 +59,7 @@ export const infoPages: Record<string, { title: string; content: string; metaDes
       We take copyright infringement seriously. If your photos, videos, or intellectual property have been uploaded to Koka Site without your consent, we will nuke them immediately upon verification.
       
       **How to file a DMCA takedown:**
-      Send an email to dmca@in.kokasite.com with the following:
+      Send an email to dmca@kokasite.com with the following:
       1. Direct URLs to the infringing content.
       2. Proof that you are the original copyright holder (or an authorized agent).
       3. A statement under penalty of perjury that the info provided is accurate.

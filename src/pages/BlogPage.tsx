@@ -80,7 +80,7 @@ const BlogPage = () => {
                         Our <span className="text-[#D91E18]">Blogs.</span>
                     </h1>
                     <p className="text-zinc-500 text-lg font-medium max-w-2xl">
-                        Discover hidden gems, cultural insights, and the best local experiences across India's most vibrant cities.
+                        Romantic stories, sensual companion guides, and insider secrets to experience unforgettable dates across India's most vibrant cities.
                     </p>
                 </div>
 

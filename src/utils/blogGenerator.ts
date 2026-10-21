@@ -2,45 +2,45 @@
 import { getCityFromSlug } from '../data/worldCities';
 
 const exoticBlogChunks = [
-    "If you're visiting for the first time, you'll quickly realize that the nightlife here is unmatched. But the real fun happens away from the crowded bars. Meeting genuine Call Girls in [CITY] has become the go-to way for businessmen and travelers to unwind. The discretion and absolute luxury of these private encounters are what make this place so famous.",
+    "Agar aap pehli baar visit kar rahe hain, toh aapko realise hoga ki yahan ki nightlife ka koi muqabla nahi hai. Par asal romance aur thrill crowded clubs me nahi, balki band kamre ke private sukoon me milta hai. Genuine Call Girls in [CITY] se milna aaj kal stylish logon aur smart travelers ka favorite tareeqa ban chuka hai unwind karne ka. Ek pyari si smile, seductive look aur pure luxury ka combination aapki poori thakan mita deta hai.",
     
-    "People always ask me how to find reliable companionship without getting scammed. It's simple: you have to know where to look. Finding a top-tier Escort Service [CITY] means skipping the shady street corners and going straight to verified, independent providers. They don't mess around with fake photos or hidden fees.",
+    "Aksar log sochte hain ki bina kisi tension ya scam ke ek sexy aur caring companion kaise milti hai. Seedhi baat hai—aapko sahi jagah par dhoondhna aana chahiye. Ek top-tier Escort Service [CITY] choose karne ka matlab hai shady street corners ko ignore karke seedhe verified, independent beauties se connect hona. Unke paas na koi fake photos hote hain, na koi hidden fees—sirf genuine connection aur khula romantic andaaz.",
     
-    "Let's be real—sometimes you just want to completely let go. Whether you're dealing with stress from work or just want to explore a wild fantasy, the Independent Call Girls [CITY] are your safest bet. Because they work for themselves without agency interference, they are way more open-minded, relaxed, and genuinely enthusiastic about making sure you have a killer time.",
+    "Sach kahein toh kabhi-kabhi dil karta hai saare rules aur daily stress bhool kar bas kisi haseena ke sath kho jayein. Din bhar ka work pressure ho ya dil me dabi koi wild fantasy, Independent Call Girls [CITY] aapke liye sabse pyara aur safe option hain. Kyunki ye bina kisi agency interference ke freely kaam karti hain, isliye inka vibe super friendly, relaxed aur seductive hota hai. Inke sath bitaya har lamha ek intoxicating dream jaisa lagta hai.",
     
-    "There's something incredibly hot about arriving at your luxury hotel room and finding a gorgeous woman waiting for you. That's the beauty of hiring a Call Girl in [CITY]. You skip all the awkward small talk of dating apps and get straight to the chemistry. Plus, it's 100% confidential. No digital trail, just cash and a great night.",
+    "Sochiye zara—aap apne luxury hotel room me enter karte hain, dim ambient lights hain, aur wahan ek behad khubsurat aur sexy ladki aapka intezar kar rahi ho. Yahi toh jaadu hai jab aap invite karte hain ek Call Girl in [CITY]. Dating apps ki awkward baaton ko skip karke seedhe sizzling chemistry aur gentle romance par aana. Ek passionate gaze, warm hug aur bina kisi digital trail ke sirf ek shandaar, memorable raat.",
     
-    "Communication is essential when arranging companionship. Clearly discussing boundaries, expectations, and timing before confirming an appointment ensures both parties feel comfortable and respected. When expectations are aligned, dates flow smoothly and comfortably.",
+    "Romantic dates ka sabse bada secret hai aapas ki understanding aur sweet communication. Jab aap pehle se hi respectfully apni expectations, timing aur boundaries discuss kar lete hain, toh date me ek alag hi comfort aur warmth aa jaati hai. Jab dono taraf mutual comfort ho, toh shaam bilkul butter ki tarah smooth, sensual aur exciting guzarne lagti hai.",
     
-    "One trend we are seeing massive growth in is the demand for mature women. Young models are great, but there is an undeniable appeal to Housewife Call girls [CITY]. They bring a level of passion, experience, and raw hunger to the bedroom that younger girls simply haven't learned yet. It's a completely different vibe that leaves guys totally speechless.",
+    "Aaj kal mature women aur unke passionate andaaz ki demand exponentially badh rahi hai. Young models toh charming hoti hi hain, lekin Housewife Call girls [CITY] ki baat hi alag hoti hai. Unke paas romance ka gehra experience, caring nature aur ek aisi sensual warmth hoti hai jo younger girls me milna mushkil hai. Unka har touch itna loving aur electrifying hota hai ki aap unke deewane ho jayenge.",
     
-    "Safety is always the number one priority. You hear stories about fake profiles all the time. That's why dialing a verified [CITY] Call Girls Number is so crucial. When you use a trusted platform, you know exactly who is going to show up at your door. Professionalism and hygiene are non-negotiable for these high-end providers.",
+    "Privacy aur safety hamesha sabse pehle aati hai. Internet par fake profiles dekh kar mood kharab na ho, isiliye ek trusted aur verified [CITY] Call Girls Number par contact karna sabse smart decision hai. Jab platform verified ho, tab aapko 100% certainty hoti hai ki wahi haseena aapke darwaze par dastak degi jise dekh kar aapka dil dhadka tha. Class, elegance aur hygiene inka golden rule hai.",
     
-    "What does a standard booking actually look like? Most sessions start with a couple of drinks and a relaxed chat. If you've booked Real Call Girls [CITY], there's no rushed, mechanical vibe. You take your time. Maybe a relaxing sensual massage to loosen you up, followed by a slow build-up of tension until neither of you can take it anymore.",
+    "Ek perfect romantic date aakhir shuru kaise hoti hai? Sabse pehle thodi soft music, do glass drink, aur dil khol kar haseen guftagu. Agar aapne book ki hain Real Call Girls [CITY], toh wahan koi jaldbazi ya mechanical vibe nahi hoti. Pehle ek sweet relaxing sensual massage jo aapki har tension ko nikal de, aur phir dheere-dheere badhti hui sizzling chemistry jo raat ko memorable bana deti hai.",
     
-    "Diversity is huge here. If you want a tall, athletic European model, you can find her. If you want a curvy, traditional Indian beauty, she's definitely available. The sheer variety of [CITY] Call Girls means you could literally hire a different type of girl every single week and never run out of amazing options to explore.",
+    "Yahan ki diversity dekh kar aapka dil khush ho jayega. Chahe aapko ek tall, confident modern diva pasand ho ya phir ek soft-spoken, curvy desi Indian beauty—har tarah ka roop yahan readily available hai. Itni zabardast variety of [CITY] Call Girls ke rehte aap har baar ek naya, thrilling aur romantic avatar explore kar sakte hain.",
     
-    "Let's talk about rates because people always want to know. You get what you pay for. A budget girl might give you a quick hour of fun, but if you want the ultimate girlfriend experience with deep kissing, zero rush, and an actual connection, investing in premium Call Girls [CITY] is the only way to go. The elite girls are worth every single penny.",
+    "Rates aur budget ki baat karein toh simple si reality hai: luxury aur class ki hamesha ek value hoti hai. Kisi cheap option me sirf formalities milti hain, lekin agar aapko chahiye deep romantic connection, passionate cuddling, seductive conversations aur genuine girlfriend experience, toh elite Call Girls [CITY] choose karna har tareeqe se worth it hai. Inka time har ek second memorable bana deta hai.",
     
-    "A lot of guys think you have to be super rich or famous to enjoy this lifestyle. You don't. Yes, there are VIP escorts that cost a fortune, but there are also plenty of beautiful, girl-next-door types who offer incredibly passionate sessions for standard rates. It's all about knowing what you want and communicating clearly.",
+    "Bahut se logon ko lagta hai ki aisi gorgeous companions ke sath date sirf ameer ya celebrities ke liye hoti hai. Yeh bilkul galat hai! Beshak ultra-high VIP escorts bhi hoti hain, lekin kaafi aisi sweet, friendly aur seductive girl-next-door beauties bhi hain jo reasonable rates par behad loving aur passionate time offer karti hain. Bas tameez se baat karein aur respectful gentleman banein, pyari shaam aapki hogi.",
     
-    "Having a plus-one who looks like a supermodel is the ultimate flex. Many clients don't just hire these girls for the bedroom; they hire them for business dinners, private parties, and VIP events. Arriving with one of the most stunning Call Girls in [CITY] on your arm immediately elevates your status in any room.",
+    "Kisi high-end party, fine-dining dinner ya private event me ek ravishing model ko apna partner bana kar le jaana alag hi confidence deta hai. Log companions ko sirf band kamre ke liye nahi, balki apni luxury life me glamour add karne ke liye bhi invite karte hain. Jab aapki arm par ek gorgeous Call Girls in [CITY] hoti hai, toh har nazar aap par thehar jaati hai.",
     
-    "For guys visiting on business, an outcall directly to your hotel is usually the best move. It's fast, incredibly discreet, and highly convenient. The second you finish your last meeting, you text a verified [CITY] Call Girls Number and within an hour, your evening goes from boring room service to an unforgettable experience.",
+    "Agar aap kisi business trip par [CITY] aaye hain, toh direct hotel outcall booking sabse convenient aur discreet hoti hai. Boring meetings aur presentations ke baad akele room service order karne ke bajay, verified [CITY] Call Girls Number par text kijiye. Ek ghante ke andar aapka thaka-hara din ek sensual aur relaxing romance me tabdeel ho jayega.",
     
-    "Sometimes, men are intimidated by the booking process. Don't be. Professional Escort Service [CITY] providers handle this every single day. Send a polite WhatsApp message stating your location, how long you want to meet, and what you're looking for. Keep it simple and respectful, and you'll have an incredible date set up in less than five minutes.",
+    "Pehli baar booking karne me bilkul bhi jhijhakne ki zaroorat nahi hai. Professional Escort Service [CITY] providers daily is tarah ke arrangements handle karti hain. Bas ek polite WhatsApp message bhejiye—apna location, meeting duration aur apni preference clear bataiye. Five minutes ke andar aapki pyari date fix ho jayegi bina kisi headache ke.",
     
-    "Flexibility in scheduling is a key benefit of independent companionship. Whether clients need short-term companionship for a dinner or extended overnight coordination for business travel, clear communication regarding schedule and terms helps ensure a pleasant, stress-free engagement.",
+    "Independent companions ke sath sabse achhi baat hoti hai unki flexibility aur freedom. Chahe aapko bas ek short dinner date aur romantic stroll chahiye, ya phir poori raat saath bitane ke liye ek caring aur sensual beauty, clear coordination se sab kuch effortlessly set ho jata hai bina kisi hassle ke.",
     
-    "High-class independent models have completely taken over the premium scene here, and for good reason. They are stunning, adventurous, and incredibly professional. If you haven't experienced the passionate energy of a top-tier beauty, you are seriously missing out on one of the greatest pleasures available in this city.",
+    "High-class independent models ne yahan ke premium dating landscape ko naya roop diya hai. Yeh educated, adventurous aur open-minded hoti hain. Agar aapne abhi tak kisi top-tier companion ke sath deep eye-contact aur gentle romantic touch feel nahi kiya, toh aap city ke sabse khoobsurat ehsaas se mehroom hain.",
     
-    "If you want to try something really wild, ask about booking a duo session. Two Real Call Girls [CITY] paying attention to you at the exact same time is a fantasy most guys only dream of. Yes, it costs double, but the absolutely insane sensory overload is an experience every guy should try at least once in his life.",
+    "Agar aap apni fantasy ko ek step aage le jana chahte hain, toh duo experience ke baare me sochiye. Do Real Call Girls [CITY] ek sath aapko attention de rahi hon, aapke sath hass rahi hon aur dono taraf se romance baras raha ho—yeh ek aisi magical feeling hai jise har koi apni life me kam se kam ek baar zaroor experience karna chahta hai.",
     
-    "Discretion goes both ways. Just as you want your privacy protected, the girls want to feel safe. When booking a Call Girl in [CITY], providing clear details, treating her with respect, and paying upfront without making things weird is the easiest way to ensure she goes absolutely wild for you behind closed doors.",
+    "Discretion aur respect dono taraf se chalti hai. Jaise aap chahte hain ki aapki privacy safe rahe, waise hi in beauties ko bhi safety aur izzat pasand hoti hai. Jab aap Call Girl in [CITY] se respectfully baat karte hain, proper payment clear karte hain aur gentleman bante hain, toh wo aapke liye dil se khul jaati hain aur aapko apna best affectionate side dikhati hain.",
     
-    "The 'exotic' label gets thrown around a lot, but what does it actually mean? It means stepping entirely outside your comfort zone. It means trying things you'd never ask a vanilla partner to do. The best Call Girls [CITY] has to offer are highly skilled in drawing out your deepest fantasies and making them a reality without an ounce of judgment.",
+    "Romantic fantasies har kisi ke dil me hoti hain, bas ek samajhne wale partner ki kami hoti hai. Jahan regular dating me log judge karte hain, wahi best Call Girls [CITY] aapko fully comfort zone deti hain. Unke saamne aap bina kisi sharm ke apni pasand share kar sakte hain, aur wo badi khushi se aapki shaam ko dream come true bana deti hain.",
     
-    "Bottom line: life is way too short to spend your evenings alone in a hotel room. The companionship, the thrill, and the incredible physical release offered by a top-tier Escort Service [CITY] are just a few clicks away. Browse the directories, find a girl whose photos make your heart skip a beat, and go have the best night of your week."
+    "Bottom line yehi hai: Zindagi bohot choti hai bore hone ya lonely raatein bitane ke liye. Ek haseen muskuraahat, narm ehsaas aur thrilling company bas ek click ki doori par hai with top-tier Escort Service [CITY]. Directory open kijiye, jis profile ne aapka dil chhoo liya use select kijiye, aur banaiye apni aaj ki raat ko bepanah sexy aur romantic."
 ];
 
 import { getCityFromSlug, getStateFromSlug } from '../data/worldCities';
@@ -68,20 +68,20 @@ const featuredLocations = [
     { name: "Dehradun", stateSlug: "uttarakhand", citySlug: "dehradun" },
 ].map(loc => ({
     name: loc.name,
-    url: `https://in.kokasite.com/call-girls/${loc.stateSlug}/${loc.citySlug}`
+    url: `https://kokasite.com/call-girls/${loc.stateSlug}/${loc.citySlug}`
 }));
 
 function getCanonicalLocationUrl(keywordOrSlug: string): string {
     const clean = keywordOrSlug.toLowerCase().trim().replace(/\s+/g, '-');
     const cityData = getCityFromSlug(clean);
     if (cityData) {
-        return `https://in.kokasite.com/call-girls/${cityData.state.slug}/${cityData.city.slug}`;
+        return `https://kokasite.com/call-girls/${cityData.state.slug}/${cityData.city.slug}`;
     }
     const stateData = getStateFromSlug(clean);
     if (stateData) {
-        return `https://in.kokasite.com/call-girls/${stateData.slug}`;
+        return `https://kokasite.com/call-girls/${stateData.slug}`;
     }
-    return `https://in.kokasite.com/service-areas`;
+    return `https://kokasite.com/service-areas`;
 }
 
 export function generateMegaBlogPost(seed: number, city: string, modelName: string, image: string): any {
@@ -106,7 +106,7 @@ export function generateMegaBlogPost(seed: number, city: string, modelName: stri
     // Resolve canonical city page URL
     const cityData = getCityFromSlug(citySlug);
     const kokaCityUrl = cityData 
-        ? `https://in.kokasite.com/call-girls/${cityData.state.slug}/${citySlug}`
+        ? `https://kokasite.com/call-girls/${cityData.state.slug}/${citySlug}`
         : getCanonicalLocationUrl(cleanCity);
 
     // Add internal links pointing strictly to canonical URLs
@@ -143,17 +143,17 @@ export function generateMegaBlogPost(seed: number, city: string, modelName: stri
 
     if (selectedLocs.length > 0) {
         const linkList = selectedLocs.map(loc => `<a href="${loc.url}" class="text-pink-600 hover:text-pink-800 underline decoration-pink-300 transition-colors font-bold">${loc.name}</a>`).join(", ");
-        contentString += `\n\nAlso, if you plan to visit other destinations, don't miss our independent directories for ${linkList}.`;
+        contentString += `\n\nAgar aap kisi doosre shahar me travel kar rahe hain aur aisi hi gorgeous companions dhund rahe hain, toh hamari verified independent directories zaroor check karein: ${linkList}.`;
     }
 
     const titleTemplates = [
-        `${cleanCity} Escort Experience: Why Nightlife is Better with ${modelName}`,
-        `The Insider's Guide to Hiring a ${cleanCity} Escort`,
-        `An Evening with ${modelName}: The Ultimate ${cleanCity} Escort Guide`,
-        `How to Find a Reliable ${cleanCity} Escort Tonight`,
-        `${cleanCity} Escort Reviews: Uncensored Details About ${modelName}`,
-        `The Real Cost of Hiring a Premium ${cleanCity} Escort`,
-        `Exploring Deep Fantasies with a ${cleanCity} Escort like ${modelName}`
+        `${cleanCity} Nightlife & Romance: Why Late Nights Are Magical with ${modelName}`,
+        `The Insider's Romantic Guide to Elite Escorts in ${cleanCity}`,
+        `An Unforgettable Evening with ${modelName}: The Ultimate ${cleanCity} Escort Guide`,
+        `How to Find a Sexy, Sweet & Reliable Companion in ${cleanCity} Tonight`,
+        `${cleanCity} Companion Diaries: Romantic Chemistry & Uncensored Moments with ${modelName}`,
+        `Luxury, Romance & Passion: Elite Escorts in ${cleanCity}`,
+        `Late Night Desires & Sweet Fantasies with a ${cleanCity} Escort like ${modelName}`
     ];
 
     const title = titleTemplates[seed % titleTemplates.length];
@@ -163,13 +163,13 @@ export function generateMegaBlogPost(seed: number, city: string, modelName: stri
         id: `blog_${seed}`,
         slug,
         title,
-        excerpt: `Curious about the escort scene in ${cleanCity}? We dive into the reality of hiring elite companions like ${modelName}, covering rates, safety, and ultimate discretion.`,
+        excerpt: `${cleanCity} ki romantic nights aur sexy companion vibes! Jaaniye kaise aap ${modelName} jaisi gorgeous aur passionate beauties ke sath private dates, sweet intimacy aur unforgettable moments enjoy kar sakte hain.`,
         content: contentString,
         image,
-        author: "Koka Site Editor",
+        author: "Koka Romance Editor",
         date: new Date(Date.now() - seed * 3600000).toISOString().split('T')[0],
-        category: "Exotic Spotlights",
-        tags: [cleanCity, "Exotic", "Call Girl", "Escort", modelName],
+        category: "Sensual Spotlights",
+        tags: [cleanCity, "Romantic", "Call Girl", "Escort", modelName],
         featuredCitySlug: citySlug
     };
 }

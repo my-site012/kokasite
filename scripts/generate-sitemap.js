@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import * as esbuild from 'esbuild';
 
-const rawSiteUrl = process.env.VITE_SITE_URL || process.env.SITE_URL || 'https://in.kokasite.com';
+const rawSiteUrl = process.env.VITE_SITE_URL || process.env.SITE_URL || 'https://kokasite.com';
 const SITE_URL = rawSiteUrl.replace(/\/+$/, '') + '/';
 
 // Helper to load TS modules dynamically via esbuild

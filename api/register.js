@@ -39,7 +39,7 @@ export default async function handler(req, res) {
           <p style="color: #cccccc;">You can now manage your ads and directory listings on Koka Site.</p>
           <br/>
           <div style="text-align: center;">
-            <a href="https://in.kokasite.com/login" style="background-color: #f4b827; color: #09090b; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">Log In to Your Account</a>
+            <a href="https://kokasite.com/login" style="background-color: #f4b827; color: #09090b; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">Log In to Your Account</a>
           </div>
           <br/>
           <p style="color: #888888; font-size: 12px; text-align: center;">If you did not request this, please ignore this email.</p>

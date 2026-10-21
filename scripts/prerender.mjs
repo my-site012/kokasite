@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import * as esbuild from 'esbuild';
 
-const rawSiteUrl = process.env.VITE_SITE_URL || process.env.SITE_URL || 'https://in.kokasite.com';
+const rawSiteUrl = process.env.VITE_SITE_URL || process.env.SITE_URL || 'https://kokasite.com';
 const SITE_URL = rawSiteUrl.replace(/\/+$/, '') + '/';
 
 // Helper to load TS modules dynamically via esbuild
@@ -471,8 +471,8 @@ async function runPrerender() {
           ${blog.content ? blog.content.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br/>') : `<p>${blog.excerpt}</p>`}
         </div>
         <div style="background-color: #18181b; border: 1px solid #27272a; padding: 20px; border-radius: 8px; margin-top: 30px;">
-          <h3 style="color: #f4b827; margin-top: 0; font-size: 18px;">Looking for companions in this city?</h3>
-          <p style="margin-bottom: 0;">Explore verified profiles in ${escapeHtml(capitalize(blog.featuredCitySlug || 'your city'))}: <a href="/call-girls/${blog.featuredCitySlug || 'delhi-ncr'}" style="color: #f4b827; font-weight: 600;">Browse local verified listings &rarr;</a></p>
+          <h3 style="color: #f4b827; margin-top: 0; font-size: 18px;">Looking for a romantic companion in this city?</h3>
+          <p style="margin-bottom: 0;">Explore verified, gorgeous beauties in ${escapeHtml(capitalize(blog.featuredCitySlug || 'your city'))}: <a href="/call-girls/${blog.featuredCitySlug || 'delhi-ncr'}" style="color: #f4b827; font-weight: 600;">Browse local verified listings &rarr;</a></p>
         </div>
       `,
       schemaJson: {
