@@ -159,48 +159,7 @@ async function runPrerender() {
       breadcrumbHtml = `<nav aria-label="Breadcrumb" style="font-size: 13px; margin-bottom: 20px; color: #71717a;">${crumbsList}</nav>`;
     }
 
-    // Build 100% VISIBLE, SEMANTIC HTML inside <div id="root">
-    // (React will hydrate and take over gracefully when JS loads, while search crawlers receive pure, rich HTML)
-    const prerenderedRootHtml = `
-<div id="root">
-  <div style="min-height: 100vh; background-color: #09090b; color: #f4f4f5; font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; padding: 24px 20px; max-width: 1200px; margin: 0 auto;">
-    <header style="border-bottom: 1px solid #27272a; padding-bottom: 18px; margin-bottom: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-      <a href="/" style="font-size: 26px; font-weight: 800; color: #f4b827; text-decoration: none; letter-spacing: -0.5px;">Koka Site</a>
-      <nav style="display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; font-weight: 500;">
-        <a href="/" style="color: #e4e4e7; text-decoration: none;">Home</a>
-        <a href="/call-girls/delhi-ncr" style="color: #e4e4e7; text-decoration: none;">Call Girls</a>
-        <a href="/massage/delhi-ncr" style="color: #e4e4e7; text-decoration: none;">Body Massage</a>
-        <a href="/service-areas" style="color: #e4e4e7; text-decoration: none;">Service Areas</a>
-        <a href="/blog" style="color: #e4e4e7; text-decoration: none;">Blog</a>
-        <a href="/sitemap-directory" style="color: #e4e4e7; text-decoration: none;">All Locations</a>
-        <a href="/post-ad" style="background-color: #f4b827; color: #09090b; padding: 6px 14px; border-radius: 6px; text-decoration: none; font-weight: 700;">Post Free Ad</a>
-      </nav>
-    </header>
-
-    <main>
-      ${breadcrumbHtml}
-      <article style="max-width: 900px; margin: 0 auto 40px auto;">
-        <h1 style="font-size: 32px; font-weight: 800; color: #fafafa; margin-bottom: 20px; line-height: 1.25; letter-spacing: -0.5px;">${escapeHtml(h1Text || title)}</h1>
-        <div style="font-size: 16px; color: #d4d4d8;">
-          ${mainContent}
-        </div>
-      </article>
-    </main>
-
-    <footer style="margin-top: 60px; border-top: 1px solid #27272a; padding-top: 30px; text-align: center; color: #71717a; font-size: 13px;">
-      <p style="margin-bottom: 8px;">© 2026 Koka Site. India's Verified Escorts, Call Girls & Body Massage Classified Directory. 18+ Only.</p>
-      <p>
-        <a href="/info/privacy-policy" style="color: #a1a1aa; text-decoration: underline; margin: 0 8px;">Privacy Policy</a> |
-        <a href="/info/terms-of-use" style="color: #a1a1aa; text-decoration: underline; margin: 0 8px;">Terms of Use</a> |
-        <a href="/info/contact-support" style="color: #a1a1aa; text-decoration: underline; margin: 0 8px;">Contact Support</a> |
-        <a href="/sitemap-directory" style="color: #a1a1aa; text-decoration: underline; margin: 0 8px;">Sitemap Directory</a>
-      </p>
-    </footer>
-  </div>
-</div>
-    `.trim();
-
-    html = html.replace(/<div id="root"><\/div>/i, prerenderedRootHtml);
+    // Keep <div id="root"></div> clean so React mounts directly without any static fallback banner or glitch
 
     // Save to dist/routePath/index.html
     const targetDir = routePath === '' ? distDir : path.join(distDir, routePath);
