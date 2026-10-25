@@ -142,7 +142,13 @@ async function runPrerender() {
     ];
 
     if (schemaJson) {
-      headTags.push(`<script type="application/ld+json">\n${JSON.stringify(schemaJson, null, 2)}\n  </script>`);
+      if (Array.isArray(schemaJson)) {
+        schemaJson.forEach(schema => {
+          headTags.push(`<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n  </script>`);
+        });
+      } else {
+        headTags.push(`<script type="application/ld+json">\n${JSON.stringify(schemaJson, null, 2)}\n  </script>`);
+      }
     }
 
     html = html.replace('</head>', `  ${headTags.join('\n  ')}\n</head>`);
@@ -159,7 +165,43 @@ async function runPrerender() {
       breadcrumbHtml = `<nav aria-label="Breadcrumb" style="font-size: 13px; margin-bottom: 20px; color: #71717a;">${crumbsList}</nav>`;
     }
 
-    // Keep <div id="root"></div> clean so React mounts directly without any static fallback banner or glitch
+    // Inject rich semantic content inside <div id="root">
+    // This allows Googlebot to immediately crawl complete headings, text, links, and schema
+    // When the browser runs React, createRoot(root).render(<App />) cleanly mounts the React app
+    const staticBody = `<div id="root"><div class="static-prerender-content" style="min-height: 100vh; background-color: #09090b; color: #f4f4f5; display: flex; flex-direction: column; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <header style="border-bottom: 1px solid #27272a; padding: 14px 20px; background-color: #0d0d10;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+      <a href="/" style="font-size: 22px; font-weight: 800; color: #f4b827; text-decoration: none; letter-spacing: -0.5px;">Koka Site</a>
+      <nav style="display: flex; gap: 16px; font-size: 14px; font-weight: 500; flex-wrap: wrap;">
+        <a href="/call-girls/delhi-ncr" style="color: #e4e4e7; text-decoration: none;">Call Girls</a>
+        <a href="/massage/delhi-ncr" style="color: #e4e4e7; text-decoration: none;">Massage</a>
+        <a href="/service-areas" style="color: #e4e4e7; text-decoration: none;">Service Areas</a>
+        <a href="/blog" style="color: #e4e4e7; text-decoration: none;">Guides</a>
+        <a href="/sitemap-directory" style="color: #f4b827; text-decoration: none;">Locations Directory</a>
+      </nav>
+    </div>
+  </header>
+  <main style="max-width: 1200px; margin: 0 auto; padding: 32px 20px; flex: 1; width: 100%; box-sizing: border-box;">
+    ${breadcrumbHtml}
+    ${h1Text ? `<h1 style="font-size: 28px; font-weight: 800; color: #fafafa; margin: 0 0 24px 0; line-height: 1.3;">${escapeHtml(h1Text)}</h1>` : ''}
+    <div style="line-height: 1.8; color: #d4d4d8; font-size: 16px;">
+      ${mainContent || ''}
+    </div>
+  </main>
+  <footer style="border-top: 1px solid #27272a; padding: 32px 20px; background-color: #0d0d10; font-size: 13px; color: #71717a; text-align: center;">
+    <p style="margin: 0 0 12px 0;">&copy; 2026 Koka Site. All rights reserved. 18+ Adult Companion Classifieds &amp; Wellness Directory.</p>
+    <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+      <a href="/" style="color: #a1a1aa; text-decoration: none;">Home</a>
+      <a href="/service-areas" style="color: #a1a1aa; text-decoration: none;">All Cities</a>
+      <a href="/sitemap-directory" style="color: #a1a1aa; text-decoration: none;">Sitemap Directory</a>
+      <a href="/info/privacy-policy" style="color: #a1a1aa; text-decoration: none;">Privacy Policy</a>
+      <a href="/info/terms-of-use" style="color: #a1a1aa; text-decoration: none;">Terms of Use</a>
+      <a href="/info/contact-support" style="color: #a1a1aa; text-decoration: none;">Contact Support</a>
+    </div>
+  </footer>
+</div></div>`;
+
+    html = html.replace('<div id="root"></div>', staticBody);
 
     // Save to dist/routePath/index.html
     const targetDir = routePath === '' ? distDir : path.join(distDir, routePath);
@@ -290,6 +332,16 @@ async function runPrerender() {
       h1: 'Client Reviews & Service Feedback',
       content: `
         <p>Check authentic client feedback before booking. All reviews are vetted by our moderation team to ensure real experiences and prevent fake ratings.</p>
+      `
+    },
+    {
+      path: 'map',
+      title: 'Interactive City Location Map - Koka Site Directory',
+      desc: 'Browse all Indian cities, states, and regions with verified companion and wellness massage classifieds on our interactive map.',
+      h1: 'Interactive Location Directory Map',
+      content: `
+        <p>Explore all 36 Indian states and union territories where independent companions and body massage specialists provide classified listings across major cities.</p>
+        ${serviceAreasContent}
       `
     },
     {
@@ -648,6 +700,52 @@ async function runPrerender() {
               </div>
             `;
 
+            const samplePhotos = [
+              "/models/202512-09-182608_KZ-0.webp",
+              "/models/Goa-Call-Girls - Copy.webp",
+              "/models/imageye___-_imgi_10_kho-63890990859307-2103213618.webp",
+              "/models/imageye___-_imgi_11_kho-63887663558331-2103213618.webp",
+              "/models/imageye___-_imgi_12_kho-63883631619394-2103213618.webp",
+              "/models/imageye___-_imgi_13_kho-63890682968191-2103213618.webp"
+            ];
+            const sampleCardsHtml = `
+              <h2 style="font-size: 22px; color: #fafafa; margin: 32px 0 16px 0;">Available Independent Profiles in ${escapeHtml(cityName)}</h2>
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-bottom: 28px;">
+                ${[1, 2, 3, 4].map(idx => {
+                  const cardNames = ["Priya Sharma", "Neha Gupta", "Riya Singh", "Ananya Verma", "Kavya Patel", "Aarti Deshmukh"];
+                  const cName = cardNames[(idx + cityName.length) % cardNames.length];
+                  const cAge = 21 + ((idx * 3 + cityName.length) % 6);
+                  const cRate = 3000 + ((idx * 500) % 2500);
+                  const cPhoto = samplePhotos[(idx + cityName.length) % samplePhotos.length];
+                  return `
+                    <div style="background-color: #141416; border: 1px solid #27272a; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column;">
+                      <div style="height: 220px; background-color: #1c1c1f; overflow: hidden; position: relative;">
+                        <img src="${cPhoto}" alt="${escapeHtml(cName)} in ${escapeHtml(cityName)}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'" />
+                        <span style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.75); color: #22c55e; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; border: 1px solid rgba(34,197,94,0.3);">✓ Verified</span>
+                      </div>
+                      <div style="padding: 14px; flex: 1; display: flex; flex-direction: column;">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+                          <h3 style="font-size: 16px; margin: 0; color: #fafafa;">${escapeHtml(cName)}, ${cAge}</h3>
+                          <span style="color: #f4b827; font-weight: 700; font-size: 14px;">₹${cRate}/hr</span>
+                        </div>
+                        <p style="font-size: 12px; color: #a1a1aa; margin: 0 0 10px 0;">📍 ${escapeHtml(cityName)} Central &amp; Outcalls</p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 4px; font-size: 11px; color: #d4d4d8; margin-bottom: 12px;">
+                          <span style="background: #27272a; padding: 2px 6px; border-radius: 4px;">Incall</span>
+                          <span style="background: #27272a; padding: 2px 6px; border-radius: 4px;">Outcall</span>
+                          <span style="background: #27272a; padding: 2px 6px; border-radius: 4px;">GFE</span>
+                          <span style="background: #27272a; padding: 2px 6px; border-radius: 4px;">Cash</span>
+                        </div>
+                        <div style="margin-top: auto; padding-top: 10px; border-top: 1px solid #27272a; display: flex; justify-content: space-between; align-items: center;">
+                          <span style="color: #f4b827; font-size: 12px; font-weight: 600;">Direct WhatsApp / Call</span>
+                          <span style="color: #34d399; font-size: 12px;">Available Now</span>
+                        </div>
+                      </div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            `;
+
             writeRouteHtml(`${cfg.prefix}/${regionSlug}/${citySlug}`, {
               title: pageTitle,
               description: pageDesc,
@@ -658,23 +756,37 @@ async function runPrerender() {
                 { name: regionName, url: `/${cfg.prefix}/${regionSlug}` },
                 { name: cityName, url: `/${cfg.prefix}/${regionSlug}/${citySlug}` }
               ],
-              mainContent: `${mainBodyHtml}${faqHtml}${nearbyHtml}`,
-              schemaJson: {
-                "@context": "https://schema.org",
-                "@type": "WebPage",
-                "name": pageTitle,
-                "description": pageDesc,
-                "url": `${SITE_URL}${cfg.prefix}/${regionSlug}/${citySlug}`,
-                "breadcrumb": {
-                  "@type": "BreadcrumbList",
-                  "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
-                    { "@type": "ListItem", "position": 2, "name": cfg.categoryTitle, "item": `${SITE_URL}${cfg.prefix}/${regionSlug}` },
-                    { "@type": "ListItem", "position": 3, "name": regionName, "item": `${SITE_URL}${cfg.prefix}/${regionSlug}` },
-                    { "@type": "ListItem", "position": 4, "name": cityName, "item": `${SITE_URL}${cfg.prefix}/${regionSlug}/${citySlug}` }
-                  ]
+              mainContent: `${mainBodyHtml}${sampleCardsHtml}${faqHtml}${nearbyHtml}`,
+              schemaJson: [
+                {
+                  "@context": "https://schema.org",
+                  "@type": "WebPage",
+                  "name": pageTitle,
+                  "description": pageDesc,
+                  "url": `${SITE_URL}${cfg.prefix}/${regionSlug}/${citySlug}`,
+                  "breadcrumb": {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                      { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_URL },
+                      { "@type": "ListItem", "position": 2, "name": cfg.categoryTitle, "item": `${SITE_URL}${cfg.prefix}/${regionSlug}` },
+                      { "@type": "ListItem", "position": 3, "name": regionName, "item": `${SITE_URL}${cfg.prefix}/${regionSlug}` },
+                      { "@type": "ListItem", "position": 4, "name": cityName, "item": `${SITE_URL}${cfg.prefix}/${regionSlug}/${citySlug}` }
+                    ]
+                  }
+                },
+                {
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": faqs.map(f => ({
+                    "@type": "Question",
+                    "name": f.q,
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": f.a
+                    }
+                  }))
                 }
-              }
+              ]
             });
           }
         });

@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/(.*)",
@@ -20,7 +21,7 @@
       ]
     },
     {
-      "source": "/(admin|dashboard|login|register|post-ad|create-profile|api)(.*)",
+      "source": "/(admin|dashboard|login|register|create-profile|api)(.*)",
       "headers": [
         {
           "key": "X-Robots-Tag",
